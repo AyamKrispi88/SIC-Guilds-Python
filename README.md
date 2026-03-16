@@ -15,7 +15,7 @@ Make sure you have installed:
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/AyamKrispi88/SIC-Guilds-Python.git
-cd SicPython
+cd SIC-Guilds-Python
 ```
 
 ### 2. Install PHP Dependencies
