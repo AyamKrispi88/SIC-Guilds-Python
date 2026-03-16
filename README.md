@@ -137,7 +137,12 @@ For production, compile assets with:
 ```bash
 npm run build
 ```
+## Kalo gabisa jalanin webnya
 
+pake ini coba:
+```
+php artisan migrate
+```
 ---
 
 **Happy Coding! 🚀**
