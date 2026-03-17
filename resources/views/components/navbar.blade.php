@@ -22,7 +22,7 @@
                 <h5>Notifikasi</h5>
             </div>
             </div>
-                        <div class="propail ">
+                <div class="propail ">
                 <img class=" size-8" src="assets\hutawi.webp" alt="">
             </div>
             </section>
