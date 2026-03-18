@@ -9,11 +9,11 @@
 </head>
 <body>
     <x-nav-bar></x-nav-bar>
-
-    {{ $slot }}
-    <div class=" flex flex-col md:flex-row justify-center items-center w-full md:w-full h-full md:h-full p-20 hover:animate-bounce">
+    <div class=" flex flex-col md:flex-col justify-center items-center w-full md:w-full h-full md:h-full p-20 hover:animate-bounce">
          <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semua</h1>
          <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semuaa</h1>
+          <x-button variant='profileU'>Anjir </x-button>
+        
     </div>
     <x-footer> </x-footer>
 </body>
