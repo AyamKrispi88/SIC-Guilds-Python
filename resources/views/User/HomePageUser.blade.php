@@ -17,10 +17,10 @@
         <p class=" text-[10px] lg:text-base">BANTUG: Berwibawa,  Amanah, Tangguh, Unggul, Gesit </p>
         </div>
     </section>
-    <section class=" flex flex-col w-full h-auto p-5 border shadow-sm">
+    <section class=" flex flex-col w-full h-auto pt-3 pb-5 px-5 lg:p-5 border shadow-sm">
     <section class="penjelasan relative flex flex-col lg:flex-row">
-        <img src="assets/hero.png" alt="">
-        <div class=" flex flex-col py-8 px-5 text-black gap-2">
+        <img class=" hidden lg:block" src="assets/hero.png" alt="">
+        <div class=" flex flex-col pb-8 lg:py-8 px-5 text-black gap-2">
             <h1 class=" text-5xl">
                 Apa Itu <span class=" font-bold">LAPOR PAK?</span>
             </h1>
@@ -29,8 +29,8 @@
         </div>
     </section>
     <div class=" flex self-end gap-3">
-        <x-button variant="profileU"> Mulai Buat Laporan </x-button>
-        <x-button variant="profileU"> Lihat Daftar Laporanmu </x-button>
+        <x-button href="" variant="generalUse"> Mulai Buat Laporan </x-button>
+        <x-button href="" variant="transpar"> Lihat Daftar Laporanmu </x-button>
     </div>
     </section>
     <section class="berita bg-white p-8 lg:p-10 flex flex-col lg:flex-col">
@@ -44,7 +44,7 @@
         <p>anjay</p>
     </article>
     <div class=" w-full gap-6 md:w-full flex justify-center">
-    <x-button variant="profileU">Eksplor Lebih Banyak</x-button>
+    <x-button href="" variant="generalUse">Eksplor Lebih Banyak</x-button>
     </div>
     </section>
     <section class="polkis-terdekat w-full h-auto p-8 flex flex-col lg:flex-col items-center gap-8">
