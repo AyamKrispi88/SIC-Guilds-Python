@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="{{ asset('logo1.png') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <x-navbar-lr></x-navbar-lr>
     @yield('content')
 </body>
 </html>

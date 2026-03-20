@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="{{ asset('assets/logo1.png') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,12 +10,7 @@
 </head>
 <body>
     <x-nav-bar></x-nav-bar>
-    <div class=" flex flex-col md:flex-col justify-center items-center w-full md:w-full h-full md:h-full p-20 hover:animate-bounce">
-         <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semua</h1>
-         <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semuaa</h1>
-          <x-button variant='profileU'>Anjir </x-button>
-        
-    </div>
+    @yield('konten')
     <x-footer> </x-footer>
 </body>
 </html>
