@@ -23,7 +23,7 @@
             </div>
             </div>
                 <div class="propail ">
-                <img class=" size-8 rounded-full object-cover" src="assets\hutawi.webp" alt="">
+                <img class=" size-8 rounded-full object-cover" src="assets\Furinaa.webp" alt="">
             </div>
             </section>
 

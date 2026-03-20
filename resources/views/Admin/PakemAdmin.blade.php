@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <x-nav-bar></x-nav-bar>
+    <x-navbar-admin></x-navbar-admin>
     <div class=" flex flex-col md:flex-row justify-center items-center w-full md:w-full h-full md:h-full p-20 hover:animate-bounce">
          <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semua</h1>
          <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semuaa</h1>
