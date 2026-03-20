@@ -1,3 +1,5 @@
+@props(['variant', 'href' => '#'])
+
 <a href="{{ $href ?? '#' }}"
 {{  $attributes->class ([
     'rounded-md border border-blue hover:blue-200 bg-blue-600 hover:bg-blue-400',
