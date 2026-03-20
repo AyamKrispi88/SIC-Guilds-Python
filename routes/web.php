@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('Admin.MenuLaporan.DetailLaporan');
+    return view('Admin.MenuLaporan.DaftarLaporan');
 });
 
 Route::get('/pakeman', function() {
