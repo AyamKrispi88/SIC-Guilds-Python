@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="{{ asset('assets/logo1.png') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+     @vite(['resources/css/app.css', 'resources/js/home.js'])
+            <!-- Fonts Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Font Belgrano -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belgrano&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
 <body>
     <x-nav-bar></x-nav-bar>
-    <div class=" flex flex-col md:flex-col justify-center items-center w-full md:w-full h-full md:h-full p-20 hover:animate-bounce">
-         <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semua</h1>
-         <h1 class=" text-7xl text-red-800 font-extrabold">Semangat semuaa</h1>
-          <x-button variant='profileU'>Anjir </x-button>
-        
-    </div>
+    @yield('konten')
     <x-footer> </x-footer>
 </body>
 </html>
