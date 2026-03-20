@@ -15,7 +15,7 @@ Make sure you have installed:
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/AyamKrispi88/SIC-Guilds-Python.git
-cd SicPython
+cd SIC-Guilds-Python
 ```
 
 ### 2. Install PHP Dependencies
@@ -137,7 +137,12 @@ For production, compile assets with:
 ```bash
 npm run build
 ```
+## Kalo gabisa jalanin webnya
 
+pake ini coba:
+```
+php artisan migrate
+```
 ---
 
 **Happy Coding! 🚀**
