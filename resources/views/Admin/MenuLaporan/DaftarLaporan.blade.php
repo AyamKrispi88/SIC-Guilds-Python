@@ -45,12 +45,19 @@
         </div>
         </div>
         <div class="flex md:flex-col flex-row gap-3 w-full md:w-auto">
-            <x-button variant="generalUse" class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-between">
-               <span class="font-medium text-center">Status Laporan:</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </x-button>
+            <div class="relative">
+                <select class="appearance-none border border-white w-64 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-between cursor-pointer">
+                    <option selected disabled>Status Laporan</option>
+                    <option value="selesai">Sudah diselesaikan</option>
+                    <option value="proses">Masih dalam proses</option>
+                    <option value="batal">Dibatalkan</option>
+                </select>
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
             <x-button variant="generalUse" class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center md:text-left">
                 <span class="font-medium">Lihat Detail Laporan</span>
             </x-button>
@@ -74,12 +81,19 @@
         </div>
         </div>
         <div class="flex md:flex-col flex-row gap-3 w-full md:w-auto">
-            <x-button variant="generalUse" class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-between">
-               <span class="font-medium text-center">Status Laporan:</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </x-button>
+            <div class="relative">
+                <select class="appearance-none border border-white w-64 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-between cursor-pointer">
+                    <option selected disabled>Status Laporan</option>
+                    <option value="selesai">Sudah diselesaikan</option>
+                    <option value="proses">Masih dalam proses</option>
+                    <option value="batal">Dibatalkan</option>
+                </select>
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
             <x-button variant="generalUse" class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center md:text-left">
                 <span class="font-medium">Lihat Detail Laporan</span>
             </x-button>
@@ -103,12 +117,19 @@
         </div>
         </div>
         <div class="flex md:flex-col flex-row gap-3 w-full md:w-auto">
-            <x-button variant="generalUse" class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-between">
-               <span class="font-medium text-center">Status Laporan:</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </x-button>
+            <div class="relative">
+                <select class="appearance-none border border-white w-64 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-between cursor-pointer">
+                    <option selected disabled>Status Laporan</option>
+                    <option value="selesai">Sudah diselesaikan</option>
+                    <option value="proses">Masih dalam proses</option>
+                    <option value="batal">Dibatalkan</option>
+                </select>
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
             <x-button variant="generalUse" class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center md:text-left">
                 <span class="font-medium">Lihat Detail Laporan</span>
             </x-button>
