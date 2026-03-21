@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 //testing
 
 Route::get('/tester', function () {
-    return view('test-component');
+    return view('Admin.MenuBuronan.DaftarBuronan');
 });
 
 //User
