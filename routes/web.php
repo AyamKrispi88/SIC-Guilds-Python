@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+//testing
+
+Route::get('/tester', function () {
+    return view('test-component');
+});
+
 //User
 
 Route::get('/', function () {
@@ -35,6 +41,10 @@ Route::get('/registrasi', function() {
 
 Route::get('/list-buron', function() {
     return view('User.BuronListUser');
+});
+
+Route::get('/newPassword', function() {
+    return view('User.Password-Baru');
 });
 
 //Admin 
