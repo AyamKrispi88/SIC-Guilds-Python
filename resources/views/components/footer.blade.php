@@ -2,7 +2,7 @@
     <section class=" bg-[#6F1A1A] w-full md:w-full h-auto md:h-auto p-10 gap-5 flex flex-col md:flex-row justify-between">
         <div class=" flex-col md:flex-col">
             <div class=" gap-5 flex md:flex-row">
-            <img class="w-31 h-10" src="assets\bendera.png" alt="">            
+            <img class="w-15 h-10" src="assets\bendera.png" alt="">            
             <img class="size-10" src="assets\logo.png" alt="">
             <img class="size-10" src="assets\polri.png" alt="">  
             </div>
