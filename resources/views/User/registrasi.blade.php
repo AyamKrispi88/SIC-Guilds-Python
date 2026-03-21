@@ -34,8 +34,8 @@
     </div>
     </section>
     <section class=" flex flex-col lg:flex-col w-full h-auto gap-3 items-center">
-        <div>
-            <x-button variant='generalUse' href="">Registrasi</x-button>
+        <div class=" w-48 lg:w-96">
+            <x-button variant='generalUse' class=" flex justify-center w-full lg:w-full" href="">Registrasi</x-button>
         </div>
         <p class=" text-blue-500">Sudah mempunyai akun? <a href="/user-login">Login..</a></p>
     </section>

@@ -23,7 +23,7 @@
             <div>
             <a  class=" text-blue-600 hover:underline" href="">Lupa password...</a>
         </div>
-        </div>
+    </div>
         
         <div class=" flex flex-col w-full lg:w-72 items-center pt-6">
             <x-button variant="generalUse" class=" text-center lg:w-full" href="">Login</x-button>
