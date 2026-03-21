@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profile</title>
-<script src="https://cdn.tailwindcss.com"></script>
+@vite(['resources/css/app.css', 'resources/js/home.js'])
+@include('FontDLainnya.Font')
 </head>
 
 <body class="bg-gray-100">
@@ -13,7 +14,7 @@
 <header class="flex justify-end items-center p-5">
     <p class="text-sm mr-3">User hihi</p>
     <img src="assets/fotoprofil.png"
-         class="w-10 h-10 rounded-full object-cover">
+    class="w-10 h-10 rounded-full object-cover">
 </header>
 
 
