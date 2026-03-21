@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('User.profil');
 });
 
+Route::get('/beranda', function() {
+    return view('User.HomePageUser');
+});
+
 Route::get('/pakeman', function() {
     return view('User.PakemUser');
 });
