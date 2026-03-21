@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" href="{{ asset('assets/logo2.png') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/home.js'])
-    @include('FontDLainnya.Font')
-</head>
-<body>
-    <x-navbar-admin></x-navbar-admin>
-
-    <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/detailadmin.png') }}')">
-        <div class="absolute inset-0 bg-[#1C1A23]/80"></div>
+@extends('Admin.PakemAdmin')
+@section('title', 'Detail Laporan - Orang Hilang')
+@section('konten')
+    <main>
+        <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/laporanhilang.png') }}')">
+        <div class="absolute inset-0 bg-[#000000]/50"></div>
          <div class=" relative flex flex-col items-center text-center pt-8 md:pt-20">
             <div class="text-left">
                 <p class="md:text-[36px] text-base">Laporan</p>
@@ -34,12 +24,19 @@
                 Hapus Laporan
             </x-button>
 
-            <x-button variant="generalUse" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-between min-w-[180px]">
-                <span class="font-medium">Status Laporan:</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </x-button>
+            <div class="relative">
+                <select class="appearance-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-between min-w-[180px] cursor-pointer">
+                    <option selected disabled>Status Laporan</option>
+                    <option value="selesai">Sudah diselesaikan</option>
+                    <option value="proses">Masih dalam proses</option>
+                    <option value="batal">Dibatalkan</option>
+                </select>
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -48,7 +45,7 @@
         <div>
             <h4 class="text-md md:text-lg font-semibold mb-2">Jenis Laporan</h4>
             <div class="relative">
-                <select class="block w-full bg-white p-3 md:p-4 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 cursor-pointer">
+                <select class=" block w-full bg-white p-3 md:p-4 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 cursor-pointer">
                     <option selected disabled>Pilih Jenis Laporan</option>
                     <option value="kriminal">Kasus Kriminal</option>
                     <option value="macet">Kemacetan Lalu Lintas</option>
@@ -104,27 +101,68 @@
     </div>
 </div>
 
-<div class="w-full px-5">
-            <h4 class="text-md md:text-lg font-semibold mb-2">Deskripsi Kejadian</h4>
+<h3 class="px-5 text-[16px] md:text-[25px] font-bold mb-1">Detail Orang Hilang</h3>
+
+<div class="px-5 flex flex-col md:flex-row gap 2 md:gap-5 justify-between items-start">
+    <div class="grid grid-cols-1 gap-6 md:mb-8 w-full max-w-[610px]">
+        <div class="flex flex-col md:flex-row gap-5 justify-between items-start">
+            <div class="grid grid-cols-1 gap-6 mb-8 w-full max-w-[610px]">
+                <div class="w-full">
+                    <h4 class="text-md md:text-lg font-semibold mb-2">Nama Lengkap</h4>
+                    <input type="text" placeholder="Tuliskan nama lengkap" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                </div>
+                <div class="w-full">
+                    <h4 class="text-md md:text-lg font-semibold mb-2">Jenis Kelamin</h4>
+                    <input type="text" placeholder="Tuliskan jenis kelamin" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                </div>
+                <div class="w-full">
+                    <h4 class="text-md md:text-lg font-semibold mb-2">Kewarganegaraan</h4>
+                    <input type="text" placeholder="Tuliskan kewarganegaraan" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                </div>
+                <div class="w-full">
+                    <h4 class="text-md md:text-lg font-semibold mb-2">Tanggal Lahir</h4>
+                    <input type="text" placeholder="Tuliskan tanggal lahir" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                </div>  
+            </div> </div> </div> 
+    <div class="w-full max-w-[610px]"> 
+        <div class="w-full">
+            <h4 class="text-md md:text-lg font-semibold mb-2">Tinggi Badan</h4>
+            <input type="text" placeholder="Tuliskan tinggi badan" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+        </div>
+        <div class="w-full mt-6"> 
+            <h4 class="text-md md:text-lg font-semibold mb-2">Berat Badan</h4>
+            <input type="text" placeholder="Tuliskan berat badan" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+        </div>
+    </div>
+</div> 
+
+<div class="w-full px-5 pt-5 md:pt-0">
+            <h4 class="text-md md:text-lg font-semibold mb-2">Keterangan</h4>
             <div class="relative">
-                <textarea type="text" placeholder="Tuliskan deskripsi kejadian" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none mb-10 h-[140px]"></textarea>
+                <textarea type="text" placeholder="Tuliskan keterangan lengkap orang yang hilang" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none mb-10 h-[140px]"></textarea>
             </div>
         </div>
 
     <div class="md:hidden justify-center flex flex-row w-full gap-3 items-center px-5 mb-5">
 
-            <x-button variant="generalUse" class="w-full max-w-[250px] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-between">
-                <span class="font-medium">Status Laporan:</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </x-button>
+            <div class="relative">
+                <select class="appearance-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center justify-between min-w-[180px] cursor-pointer">
+                    <option selected disabled>Status Laporan</option>
+                    <option value="selesai">Sudah diselesaikan</option>
+                    <option value="proses">Masih dalam proses</option>
+                    <option value="batal">Dibatalkan</option>
+                </select>
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
 
             <x-button variant="transpar" class="w-full max-w-[250px] hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
                 Hapus Laporan
             </x-button>
         </div>
 
-    <x-footer> </x-footer>
-</body>
-</html>
+    </main>
+@endsection
