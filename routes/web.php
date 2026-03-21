@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+//User
+
 Route::get('/', function () {
     return view('User.profil');
 });
@@ -14,9 +16,6 @@ Route::get('/pakeman', function() {
     return view('User.PakemUser');
 });
 
-Route::get('/admin', function() {
-    return view('Admin.HomePageAdmin');
-});
 
 Route::get('/user-login', function() {
     return view('User.login');
@@ -29,6 +28,16 @@ Route::get('/confirm', function() {
 Route::get('/password-changed', function() {
     return view('User.change-password');
 });
+
+Route::get('/registrasi', function() {
+    return view('User.registrasi');
+});
+
+Route::get('/list-buron', function() {
+    return view('User.BuronListUser');
+});
+
+//Admin 
 
 Route::get('/menu-laporan', function() {
     return view('Admin.MenuLaporan.DetailLaporan');
@@ -52,3 +61,9 @@ Route::get('/admin-daftarLaporan', function() {
 Route::get('/admin-detailLaporan', function() {
     return view('Admin.MenuLaporan.DetailLaporan');
 });
+
+Route::get('/admin', function() {
+    return view('Admin.HomePageAdmin');
+});
+
+
