@@ -19,14 +19,58 @@
         <p class=" text-center text-[10px] lg:text-base">Daftar Orang Dalam pencarian </p>
         </div>
     </section>
-    <section class=" grid grid-cols-1 lg:grid-cols-3 w-full h-auto lg:w-full lg:h-auto p-10">
-        <p>anjay</p>
-         <p>anjay</p>
-          <p>anjay</p>
-           <p>anjay</p>
-            <p>anjay</p>
-             <p>anjay</p>
-              <p>anjay</p>
+     
+    <input type="text" placeholder="Cari Nama Tersangka" class="border rounded-lg ml-16 my-8 px-4 text-2xl bg-amber-50 w-[50%] mr-8">
+
+    <section class=" grid grid-cols-1 lg:grid-cols-3 w-full gap-8 h-auto lg:w-full lg:h-auto p-10 justify-items-center">
+        <x-daftarburonan
+            image="{{ asset('assets/GambarBuron/1.png') }}"
+            title="Krisna Arduy"
+            content="Perampokan Bank BPD Bali. 18 Maret 2025. Dalung-Badung"
+        />
+
+         <x-daftarburonan 
+            image="{{ asset('assets/GambarBuron/2.png') }}"
+            title="Tryas Angsadewi"
+            content="Penyeludupan narkoba. 29 april 2024. Gilimanuk-Jembrana"
+        />
+
+        <x-daftarburonan 
+            image="{{ asset('assets/GambarBuron/3.png') }}"
+            title="Rania"
+            content="Pelaku pembegalan jalan raya. 28 april 2022. Sidan-Jakarta "  
+        />
+
+        <x-daftarburonan  
+            image="{{ asset('assets/GambarBuron/4.png') }}"
+            title="Guy"
+            content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
+        />
+        <x-daftarburonan
+            image="{{ asset('assets/GambarBuron/5.png') }}"
+            title="Pilip"
+            content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
+        />
+        <x-daftarburonan 
+            image="{{ asset('assets/GambarBuron/6.png') }}"
+            title="Agoesde"
+            content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
+        />
+        <x-daftarburonan
+            image="{{ asset('assets/GambarBuron/7.png') }}"
+            title="Aruel"
+            content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
+        />
+                <x-daftarburonan 
+            image="{{ asset('assets/GambarBuron/8.png') }}"
+            title="Deasa"
+            content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
+        />
+                <x-daftarburonan  
+            image="{{ asset('assets/GambarBuron/9.png') }}"
+            title="Ari-ari"
+            content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
+        />
     </section>
     </main>
 <x-footer> </x-footer>
