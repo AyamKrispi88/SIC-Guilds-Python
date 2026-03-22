@@ -56,15 +56,20 @@ Route::get('/laporan', function () {
     return view('User.laporan');
 });
 
+Route::get('/list-buronan', function() {
+    return view('User.BuronListUser');
+});
+
+Route::get('/pw', function() {
+    return view('User.Password-Baru');
+});
+
 //Admin 
 
 Route::get('/menu-laporan', function() {
     return view('Admin.MenuLaporan.DetailLaporan');
 });
 
-Route::get('/list-buronan', function() {
-    return view('User.BuronListUser');
-});
 Route::get('/login-admin', function() {
     return view('Admin.LoginAdmin');
 });
@@ -81,8 +86,22 @@ Route::get('/admin-detailLaporan', function() {
     return view('Admin.MenuLaporan.DetailLaporan');
 });
 
+Route::get('/admin-laporandetail', function() {
+    return view('Admin.MenuLaporan.DetailLaporanOrhil');
+});
+
+
 Route::get('/admin', function() {
     return view('Admin.HomePageAdmin');
 });
+
+Route::get('/daftar-artikel', function() {
+    return view('Admin.MenuArtikel.DaftarArtikel');
+});
+
+Route::get('/listburonA', function() {
+    return view('Admin.MenuBuronan.DaftarBuronan');
+});
+
 
 
