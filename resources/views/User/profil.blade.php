@@ -6,6 +6,7 @@
 <title>Profile</title>
 @vite(['resources/css/app.css', 'resources/js/home.js'])
 @include('FontDLainnya.Font')
+    <link rel="icon" href="{{ asset('assets/logo1.png') }}">
 </head>
 
 <body class="bg-gray-100">
