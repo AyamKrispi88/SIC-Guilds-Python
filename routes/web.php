@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('User.HomePageUser');
+    return view('User.Notifikasi');
 });
 
 //testing
@@ -86,7 +86,7 @@ Route::get('/admin-detailLaporan', function() {
     return view('Admin.MenuLaporan.DetailLaporan');
 });
 
-Route::get('/admin-laporandetail', function() {
+Route::get('/admin-orangHilang', function() {
     return view('Admin.MenuLaporan.DetailLaporanOrhil');
 });
 
