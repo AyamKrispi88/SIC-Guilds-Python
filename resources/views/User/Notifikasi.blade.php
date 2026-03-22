@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/home.js'])
-    @include('FontDLainnya.Font')
-</head>
-<body>
-   <x-navbar></x-navbar>
-
+@extends('User.PakemUser')
+@section('title', 'Notifikasi Sistem')
+@section('konten')
    <div>
    <img src="{{ asset('assets/Notifikasi.png') }}" class="w-full">
    </div>
@@ -38,9 +28,4 @@
     </div>
 
 </div>
-
-
-
-    <x-footer></x-footer>
-</body>
-</html>
+@endsection
