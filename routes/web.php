@@ -10,7 +10,7 @@ Route::get('/', function () {
 //testing
 
 Route::get('/tester', function () {
-    return view('Admin.MenuBuronan.DaftarBuronan');
+    return view('Admin.MenuLaporan.DaftarLaporan');
 });
 
 //User
