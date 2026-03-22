@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+Route::get('/', function () {
+    return view('User.HomePageUser');
+});
+
 //testing
 
 Route::get('/tester', function () {
@@ -10,13 +15,9 @@ Route::get('/tester', function () {
 
 //User
 
-Route::get('/', function () {
-    return view('User.profil');
-});
-
-Route::get('/beranda', function() {
-    return view('User.HomePageUser');
-});
+//Route::get('/beranda', function() {
+//    return view('User.HomePageUser');
+//});
 
 Route::get('/pakeman', function() {
     return view('User.PakemUser');
@@ -45,6 +46,14 @@ Route::get('/list-buron', function() {
 
 Route::get('/newPassword', function() {
     return view('User.Password-Baru');
+});
+
+Route::get('/profile-user', function () {
+    return view('User.profil');
+});
+
+Route::get('/laporan', function () {
+    return view('User.laporan');
 });
 
 //Admin 
