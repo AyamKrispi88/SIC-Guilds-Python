@@ -1,8 +1,8 @@
-<footer class=" w-full md:w-full h-auto md:h-auto flex flex-col md:flex-col">
-    <section class=" bg-[#6F1A1A] p-10 gap-20 flex md:flex-row justify-between">
+<footer class=" flex    w-full md:w-full h-auto md:h-auto  flex-col md:flex-col">
+    <section class=" bg-[#6F1A1A] w-full md:w-full h-auto md:h-auto p-10 gap-5 flex flex-col md:flex-row justify-between">
         <div class=" flex-col md:flex-col">
             <div class=" gap-5 flex md:flex-row">
-            <img class="w-31 h-10" src="assets\bendera.png" alt="">            
+            <img class="w-15 h-10" src="assets\bendera.png" alt="">            
             <img class="size-10" src="assets\logo.png" alt="">
             <img class="size-10" src="assets\polri.png" alt="">  
             </div>
@@ -18,7 +18,7 @@
                 <svg class=" size-6 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M61.4 64C27.5 64 0 91.5 0 125.4 0 126.3 0 127.1 .1 128L0 128 0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256-.1 0c0-.9 .1-1.7 .1-2.6 0-33.9-27.5-61.4-61.4-61.4L61.4 64zM464 192.3L464 384c0 8.8-7.2 16-16 16L64 400c-8.8 0-16-7.2-16-16l0-191.7 154.8 117.4c31.4 23.9 74.9 23.9 106.4 0L464 192.3zM48 125.4C48 118 54 112 61.4 112l389.2 0c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7z"/></svg>
                 </a>
                 <a href="https://polri.go.id/">
-                <p> info @polri.go.id</p>
+                <p class=" "> info @polri.go.id</p>
                 </a>
             </div>
             <div class="flex md:flex-row pt-1 gap-1">
@@ -46,7 +46,7 @@
                 </a>
             </div>
         </div>
-        <div class=" flex flex-col md:flex-col text-xl text-black">
+        <div class=" flex flex-col md:flex-col text-xl text-black mt-8">
             <h1 class=" font-semibold">Nomor Darurat:</h1>
             <p>CS Polri: 110</p>
             <p>No darurat terpadu: 112</p>
