@@ -68,7 +68,7 @@
             </p> 
         </div>
         </div>
-        <div class="flex flex-row gap-3 w-full md:w-auto">
+        <div class="flex md:flex-col flex-row gap-3 w-full md:w-auto">
             <x-dropdown-status class="flex-1"></x-dropdown-status>
             <x-button variant="generalUse" class="flex-1 w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center md:text-left">
                 <span class="font-medium">Lihat Detail Laporan</span>
@@ -93,7 +93,7 @@
         </div>
         </div>
         <div class="flex md:flex-col flex-row gap-3 w-full md:w-auto">
-            <x-dropdown-status class="flex-1"></x-dropdown-status>
+            <x-dropdown-status></x-dropdown-statusfl>
             <x-button variant="generalUse" class="flex-1 w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center md:text-left">
                 <span class="font-medium">Lihat Detail Laporan</span>
             </x-button>
