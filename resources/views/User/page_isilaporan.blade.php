@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" href="{{ asset('assets/logo2.png') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/home.js'])
-    @include('FontDLainnya.Font')
-</head>
-<body>
-    <x-navbar-admin></x-navbar-admin>
+@extends('User.PakemUser')
+@section('title', 'isi laporan')
+@section('konten')
 
-    <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/detailadmin.png') }}')">
+       <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/detailadmin.png') }}')">
         <div class="absolute inset-0 bg-[#1C1A23]/80"> </div>
          <div class=" relative flex flex-col items-center text-center pt-8 md:pt-20">
             <div class="text-left">
@@ -25,7 +15,7 @@
 <div class="p-5">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-5 mb-8">
         <div>
-            <h1 class="text-[23px] md:text-[40px] font-bold mb-1">Laporan dari Rania</h1>
+            <h1 class="text-[23px] md:text-[40px] font-bold mb-1">Laporan</h1>
             <h3 class="text-[16px] md:text-[25px] text-gray-600">Status terkini: sudah ditangani</h3>
         </div>
 
@@ -78,7 +68,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
             <circle cx="12" cy="13" r="4"></circle>
-            s</svg>
+            </svg>
                 <p class="text-lg text-gray-600 font-semibold">Cantumkan Bukti Kejadian</p>
             </div>
             <input type="file" class="hidden" accept="image/*" />
@@ -94,15 +84,9 @@
             </div>
         </div>
 
-    <div class="md:hidden justify-center flex flex-row w-full gap-3 items-center px-5 mb-5">
-
-        <x-dropdown-status></x-dropdown-status>
-
-            <x-button variant="transpar" class="w-full max-w-[250px] hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
-                Hapus Laporan
-            </x-button>
-        </div>
-
-    <x-footer> </x-footer>
-</body>
-</html>
+    <div class="flex justify-center mb-6">
+    <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
+        Buat Laporan
+    </x-button>
+    </div>
+@endsection
