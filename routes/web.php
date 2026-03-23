@@ -1,16 +1,17 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('Admin.MenuLaporan.DetailLaporan');
+    return view('User.page_daftarartikel');
 });
 
 //testing
 
 Route::get('/tester', function () {
-    return view('Admin.MenuLaporan.DaftarLaporan');
+    return view('User.page_laporan');
 });
 
 //User
