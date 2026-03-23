@@ -32,13 +32,15 @@
     <div class="grid grid-cols-1 gap-6 mb-8 w-full max-w-2xl">  
         <div>
             <h4 class="text-md md:text-lg font-semibold mb-2">Jenis Laporan</h4>
-            <x-jenislaporan></x-jenislaporan>
+            <x-jenislaporan readonly></x-jenislaporan>
         </div>
 
         <div class="w-full">
-            <h4 class="text-md md:text-lg font-semibold mb-2">Tanggal Kejadian</h4>
+            <h4 class="text-md md:text-lg font-semibold mb-2">Tanggal Hilang</h4>
             <div class="relative">
                 <input type="date" 
+                value="2022-08-09"
+                readonly
                 class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer">
                 <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" viewBox="0 0 448 512" fill="currentColor">
@@ -49,9 +51,9 @@
         </div>
 
         <div class="w-full">
-            <h4 class="text-md md:text-lg font-semibold mb-2">Lokasi Kejadian</h4>
+            <h4 class="text-md md:text-lg font-semibold mb-2">Lokasi Terakhir</h4>
             <div class="relative">
-                <input type="text" placeholder="Tuliskan lokasi kejadian" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                <input type="text" value="Patung macan" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
                 <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 384 512" fill="white" stroke="black" stroke-width="32">
                         <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/>
@@ -63,16 +65,8 @@
 
     <div class="w-full flex flex-col items-center md:items-startmax-w-[400px]">
         <h4 class="text-md md:text-lg font-semibold mb-2">Foto Kejadian</h4>
-        <label class="flex flex-col items-center justify-center w-full md:w-[350px] h-[350px] border-2 border-gray-300 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-all shadow-sm">
             <div class="flex flex-col items-center justify-center p-6 text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-            <circle cx="12" cy="13" r="4"></circle>
-            s</svg>
-                <p class="text-lg text-gray-600 font-semibold">Cantumkan Bukti Kejadian</p>
-            </div>
-            <input type="file" class="hidden" accept="image/*" />
-        </label>
+            <img class=""src="assets/orhil.png" alt="">
     </div>
     </div>
 </div>
@@ -85,37 +79,39 @@
             <div class="grid grid-cols-1 gap-6 mb-8 w-full max-w-[610px]">
                 <div class="w-full">
                     <h4 class="text-md md:text-lg font-semibold mb-2">Nama Lengkap</h4>
-                    <input type="text" placeholder="Tuliskan nama lengkap" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                    <input type="text" value="Krishna Ardi si Merah dari goa hitam" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
                 </div>
                 <div class="w-full">
                     <h4 class="text-md md:text-lg font-semibold mb-2">Jenis Kelamin</h4>
-                    <input type="text" placeholder="Tuliskan jenis kelamin" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                    <input type="text" value="Laki - laki" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
                 </div>
                 <div class="w-full">
                     <h4 class="text-md md:text-lg font-semibold mb-2">Kewarganegaraan</h4>
-                    <input type="text" placeholder="Tuliskan kewarganegaraan" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                    <input type="text" value="WNI/Warga Negara Indonesia" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
                 </div>
                 <div class="w-full">
                     <h4 class="text-md md:text-lg font-semibold mb-2">Tanggal Lahir</h4>
-                    <input type="text" placeholder="Tuliskan tanggal lahir" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+                    <input type="text" value="29 Februari 2990" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
                 </div>  
             </div> </div> </div> 
     <div class="w-full max-w-[610px]"> 
         <div class="w-full">
             <h4 class="text-md md:text-lg font-semibold mb-2">Tinggi Badan</h4>
-            <input type="text" placeholder="Tuliskan tinggi badan" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+            <input type="text" value="173 cm" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
         </div>
         <div class="w-full mt-6"> 
             <h4 class="text-md md:text-lg font-semibold mb-2">Berat Badan</h4>
-            <input type="text" placeholder="Tuliskan berat badan" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
+            <input type="text" value="70 kg" readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none">
         </div>
     </div>
 </div> 
 
 <div class="w-full px-5 pt-5 md:pt-0">
-            <h4 class="text-md md:text-lg font-semibold mb-2">Keterangan</h4>
+            <h4 class="text-md md:text-lg font-semibold mb-2">Deskripsi Orang Hilang</h4>
             <div class="relative">
-                <textarea type="text" placeholder="Tuliskan keterangan lengkap orang yang hilang" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none mb-10 h-[140px]"></textarea>
+                <textarea type="text" readonly placeholder="Tuliskan keterangan lengkap orang yang hilang" class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none mb-10 h-[140px]">
+Ya begitulah
+                </textarea>
             </div>
         </div>
 
