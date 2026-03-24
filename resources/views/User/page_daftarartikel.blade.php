@@ -11,7 +11,7 @@
         </div>
     </section>
 
-    <input type="text" placeholder="Cari Nama Tersangka" class="border rounded-lg ml-16 my-8 px-4 text-2xl bg-amber-50 w-[50%] mr-8">
+    <input type="text" placeholder="Cari Nama Tersangka" class="border rounded-lg ml-16 my-8 px-4 text-2xl bg-amber-50a w-[50%] mr-8">
 
    <section class=" grid grid-cols-1 lg:grid-cols-3 w-full gap-8 h-auto lg:w-full lg:h-auto p-10 justify-items-center">
     <x-daftarartikel
