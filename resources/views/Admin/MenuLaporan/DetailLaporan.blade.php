@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" href="{{ asset('assets/logo2.png') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/home.js'])
-    @include('FontDLainnya.Font')
-</head>
-<body>
-    <x-navbar-admin></x-navbar-admin>
+@extends('Admin.PakemAdmin')
+@section('title', 'Detail Laporan')
+@section('konten')
 
+<main class="font-poppins">
     <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/detailadmin.png') }}')">
         <div class="absolute inset-0 bg-[#1C1A23]/80"> </div>
          <div class=" relative flex flex-col items-center text-center pt-8 md:pt-20">
@@ -103,7 +94,6 @@ Padahal patung itu bagus banget, tapi malah dibongkar. Lalu menyebabkan kemaceta
                 Hapus Laporan
             </x-button>
         </div>
+</div>
 
-    <x-footer> </x-footer>
-</body>
-</html>
+@endsection

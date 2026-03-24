@@ -11,8 +11,8 @@
     </div>
     <div class="hidden origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-white ring-opacity-5 focus:outline-none z-10">
         <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-800" role="menuitem">Laporan Kriminal</a>
-            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-800" role="menuitem">Hambatan Lalu Lintas</a>
+            <p class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-800" role="menuitem">Laporan Kriminal</p>
+            <p class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-800" role="menuitem">Hambatan Lalu Lintas</p>
             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-800" role="menuitem">Laporan Orang Hilang</a>
         </div>
     </div>

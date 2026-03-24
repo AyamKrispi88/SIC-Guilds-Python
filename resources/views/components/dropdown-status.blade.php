@@ -1,6 +1,6 @@
 <div class="relative inline-block text-left">
     <div class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-lg cursor-pointer inline-flex items-center w-full md:w-64">
-        <span class="text-white font-semibold gap-5 flex items-center">
+        <span class="text-white font-semibold gap-5 flex items-center text-[10px]">
             Status Laporan
         </span>
         <div class="md:absolute inset-y-0 right-4 flex items-center pointer-events-none">
@@ -11,9 +11,9 @@
     </div>
     <div class="hidden origin-top-right absolute right-0 mt-2 w-full md:w-64 rounded-md shadow-lg bg-white ring-1 ring-white ring-opacity-5 focus:outline-none z-10">
         <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-700" role="menuitem">Belum Diproses</a>
-            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-700" role="menuitem">Sedang Diproses</a>
-            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-700" role="menuitem">Selesai</a>
+            <p class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-700" role="menuitem">Belum Diproses</p>
+            <p class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-700" role="menuitem">Sedang Diproses</p>
+            <p class="block px-4 py-2 text-sm text-white hover:bg-blue-600 border border-white rounded bg-blue-700" role="menuitem">Selesai</p>
         </div>
     </div>
 </div>

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Admin - Login</title>
      @vite(['resources/css/app.css', 'resources/js/home.js'])
      @include('FontDLainnya.Font')
 </head>
 <body>
 <x-navbar-lr></x-navbar-lr>
 
+<div class="font-poppins">
 <div class="mt-10 px-4">
     <div class="mb-6 w-[90%] md:w-full max-w-md mx-auto">
         <h4 class="text-md md:text-lg font-semibold mb-2">Email atau Username</h4>
@@ -44,6 +45,7 @@
         </x-button>
     </div>
 
+</div>
 </div>
 
 
