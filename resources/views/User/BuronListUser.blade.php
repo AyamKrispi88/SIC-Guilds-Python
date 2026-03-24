@@ -23,7 +23,15 @@
     <input type="text" placeholder="Cari Nama Tersangka" class="border rounded-lg ml-16 my-8 px-4 text-2xl bg-amber-50 w-[50%] mr-8">
 
     <section class=" grid grid-cols-1 lg:grid-cols-3 w-full gap-8 h-auto lg:w-full lg:h-auto p-10 justify-items-center">
-        <x-daftarburonan
+       @foreach ($buronan as $item)
+           <x-daftarburonan
+           :gmbr="$item['gmbr']"
+           :judul="$item['judul']"
+           :ket="$item['ket']"
+           />
+       @endforeach
+       {{--   Backup coding sebelumnya 
+         <x-daftarburonan
             image="{{ asset('assets/GambarBuron/1.png') }}"
             title="Krisna Arduy"
             content="Perampokan Bank BPD Bali. 18 Maret 2025. Dalung-Badung"
@@ -71,6 +79,7 @@
             title="Ari-ari"
             content="Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat"  
         />
+       --}}
     </section>
     </main>
 <x-footer> </x-footer>
