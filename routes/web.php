@@ -2,7 +2,7 @@
 
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BuronListUserController;
 
 Route::get('/', function () {
     return view('components.dropdown-notifuser');
@@ -16,9 +16,9 @@ Route::get('/tester', function () {
 
 //User
 
-//Route::get('/beranda', function() {
-//    return view('User.HomePageUser');
-//});
+Route::get('/beranda', function() {
+    return view('User.HomePageUser');
+});
 
 Route::get('/pakeman', function() {
     return view('User.PakemUser');
@@ -41,9 +41,6 @@ Route::get('/registrasi', function() {
     return view('User.registrasi');
 });
 
-Route::get('/list-buron', function() {
-    return view('User.BuronListUser');
-});
 
 Route::get('/newPassword', function() {
     return view('User.Password-Baru');
@@ -57,9 +54,7 @@ Route::get('/laporan', function () {
     return view('User.laporan');
 });
 
-Route::get('/list-buronan', function() {
-    return view('User.BuronListUser');
-});
+Route::get('/list-buronan', [BuronListUserController::class, 'index']);
 
 Route::get('/pw', function() {
     return view('User.Password-Baru');
