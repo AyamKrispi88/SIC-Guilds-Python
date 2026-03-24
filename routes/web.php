@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuronListUserController;
 
 Route::get('/', function () {
-    return view('components.dropdown-notifuser');
+    return view('test-component');
 });
 
 //testing
