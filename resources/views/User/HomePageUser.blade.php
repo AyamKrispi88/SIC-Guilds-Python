@@ -12,7 +12,7 @@
 <body class=" bg-[#E0E0E0]">
     <x-nav-bar></x-nav-bar>
 <main>
-    <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/polkisbaris.png') }}')">
+    <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset("assets/polkisbaris.png") }}')">
         <div class="absolute inset-0 bg-gradient-to-r from-[#471F00]/80 to-[#000080]/80"></div>
          <div class=" relative py-7 px-10 lg:px-20 lg:py-28">
         <h1 class=" font-bold text-2xl lg:text-[64px] leading-tight">SELAMAT DATANG <br> DI LAPOR PAK!!</h1>

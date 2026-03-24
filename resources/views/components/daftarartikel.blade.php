@@ -1,13 +1,7 @@
-@props([
-    'image', 
-    'title', 
-    'author', 
-    'content', 
-    'url' => '#'
-])
+
 
 <div class="max-w-sm rounded-xl overflow-hidden shadow-md border border-gray-100 bg-white flex flex-col h-full">
-    <img class="w-full h-48 object-cover" src="{{ $image }}" alt="{{ $title }}">
+    <img class="w-full h-auto object-cover" src="{{ asset($img) }}" alt="{{ $title }}">
 
     <div class="p-5 flex flex-col flex-grow">
         <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-2 leading-tight">
