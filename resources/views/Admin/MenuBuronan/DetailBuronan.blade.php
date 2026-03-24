@@ -1,7 +1,7 @@
 @extends('Admin.PakemAdmin')
 @section('title', 'Detail Buronan')
 @section('konten')
-<main>
+<main class="font-poppins">
     <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/daftartersangka.png') }}')">
         <div class="absolute inset-0"></div>
          <div class=" relative flex flex-col items-center text-center pt-8 md:pt-20">
@@ -25,7 +25,7 @@
         </div>
 
         <div class="hidden md:block md:flex md:gap-3">
-            <x-dropdown-status></x-dropdown-status>
+            <x-admin-statuslaporan></x-admin-statuslaporan>
 
             <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Edit Laporan
@@ -118,8 +118,8 @@ Mata: Coklat
         </div>
         </div>
     </div>
-        <div class="md:hidden flex gap-3 justify-center mb-5">
-            <x-dropdown-status></x-dropdown-status>
+        <div class="md:hidden flex gap-3 justify-center mb-5 px-4">
+            <x-admin-statuslaporan></x-admin-statuslaporan>
 
             <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Edit Laporan
@@ -136,7 +136,7 @@ Mata: Coklat
             </x-button>
         </div> 
 
-<div class="hidden p-5">
+<div class="p-5">
     <div class="flex flex-col md:flex-row text-left justify-between">
         <div>
             <h1 class="text-[23px] md:text-[40px] font-bold">Laporan Ditemukan Tersangka</h1>
@@ -145,11 +145,11 @@ Mata: Coklat
 
         <div class="hidden md:block md:flex md:gap-3 md:items-center">
             <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
-            Verifikasi
+            Diterima
             </x-button>
 
             <x-button variant="transpar" class="w-full max-w-[250px] hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center whitespace-nowrap">
-            Hapus Laporan
+            Ditolak
             </x-button>
         </div>
     </div>
@@ -195,11 +195,11 @@ Mata: Coklat
 
     <div class="md:hidden flex gap-3 justify-center">
             <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
-            Verifikasi
+            Diterima
             </x-button>
 
             <x-button variant="transpar" class="w-full max-w-[250px] hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center whitespace-nowrap">
-            Hapus Laporan
+            Ditolak
             </x-button>
         </div>
 </div>        

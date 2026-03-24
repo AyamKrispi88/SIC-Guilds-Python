@@ -1,7 +1,7 @@
 @extends('Admin.PakemAdmin')
 @section('title', 'Unggah Buronan')
 @section('konten')
-<main>
+<main class="font-poppins">
     <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/daftartersangka.png') }}')">
         <div class="absolute inset-0"></div>
          <div class=" relative flex flex-col items-center text-center pt-8 md:pt-20">

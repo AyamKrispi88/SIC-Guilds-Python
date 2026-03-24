@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" href="{{ asset('assets/logo2.png') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-     @vite(['resources/css/app.css', 'resources/js/home.js'])
-     @include('FontDLainnya.Font')
-</head>
-<body>
-    <x-navbar-admin></x-navbar-admin>
-
+@extends('Admin.PakemAdmin')
+@section('title', 'Daftar Laporan')
+@section('konten')
+<main class="font-poppins">
     <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/laporanadmin.png') }}')">
         <div class="absolute inset-0 bg-gradient-to-r from-[#E4C72B]/80 to-[#000080]/80"></div>
          <div class=" relative flex flex-col items-center text-center pt-8 md:pt-20">
@@ -26,7 +16,7 @@
         <input 
             type="text" 
             placeholder="Cari: " 
-            class="w-[50%] border border-gray-300 rounded-md shadow focus:outline-none placeholder-gray-400">
+            class="w-[50%] border border-gray-300 rounded-md shadow focus:outline-none placeholder-gray-400 px-2 py-2">
     </div>
 
     <div class="mb-6 w-[90%] mt-5 md:w-full flex flex-col md:flex-row gap-5">
@@ -36,8 +26,8 @@
             <img class="w-[107px] h-[107px] mx-5 rounded-full object-cover" src="{{ asset('assets/hutawi.webp') }}" alt="">
         </div>
         <div>
-           <h2 class="text-[32px] font-bold">Laporan: Tawuran Moment</h2>
-           <p class="text-[25px]">
+           <h2 class="text-[18px] md:text-[32px] font-bold">Laporan: Tawuran Moment</h2>
+           <p class="text-[12px] md:text-[25px]">
             Pelapor: User Hihi <br>
             Status: Sudah Selesai <br>
             Waktu Pelaporan: 22 Desember 2022, 17:00 WIB <br>
@@ -57,11 +47,11 @@
         <div class="flex items-center gap-4 p-4 border rounded-lg shadow-sm bg-[#D9D9D9] mx-5 w-full justify-between flex-wrap">
         <div class="flex items-center gap-4">
         <div class="shrink-0">
-            <img class="w-[107px] h-[107px] mx-5 rounded-full object-cover" src="{{ asset('assets/hutawi.webp') }}" alt="">
+            <img class="w-[107px] md:h-[107px] mx-5 rounded-full object-cover" src="{{ asset('assets/hutawi.webp') }}" alt="">
         </div>
         <div>
-           <h2 class="text-[32px] font-bold">Laporan: Tawuran Moment</h2>
-           <p class="text-[25px]">
+           <h2 class="text-[18px] md:text-[32px] font-bold">Laporan: Tawuran Moment</h2>
+           <p class="text-[12px] md:text-[25px]">
             Pelapor: User Hihi <br>
             Status: Sudah Selesai <br>
             Waktu Pelaporan: 22 Desember 2022, 17:00 WIB <br>
@@ -84,8 +74,8 @@
             <img class="w-[107px] h-[107px] mx-5 rounded-full object-cover" src="{{ asset('assets/hutawi.webp') }}" alt="">
         </div>
         <div>
-           <h2 class="text-[32px] font-bold">Laporan: Tawuran Moment</h2>
-           <p class="text-[25px]">
+           <h2 class="text-[18px] md:not-first-of-type:text-[32px] font-bold">Laporan: Tawuran Moment</h2>
+           <p class="text-[12px] md:text-[25px]">
             Pelapor: User Hihi <br>
             Status: Sudah Selesai <br>
             Waktu Pelaporan: 22 Desember 2022, 17:00 WIB <br>
@@ -101,6 +91,5 @@
     </div>
     </div>
 
-    <x-footer> </x-footer>
-</body>
-</html>
+</main>
+@endsection

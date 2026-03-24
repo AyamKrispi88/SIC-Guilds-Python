@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuronListUserController;
 
 Route::get('/', function () {
-    return view('test-component');
+    return view('Admin.MenuBuronan.DetailBuronan');
 });
 
 //testing
