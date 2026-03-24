@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('User.page_daftarartikel');
+    return view('components.dropdown-notifuser');
 });
 
 //testing
