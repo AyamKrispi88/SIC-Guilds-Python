@@ -99,13 +99,14 @@
             <h4 class="text-md md:text-lg font-semibold mb-2">Keterangan</h4>
             <div class="relative">
                 <textarea type="text"
-                readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none mb-10 h-[140px]">Tanggal Lahir: 32 Juni 2002 
-Tempat Lahir: Tabanan 
-Tinggi: 70Kg  
-Berat:  700cm  
-Postur badan: Tunggu kiris  
-Rambut: Hitam bersinar
-Mata: Coklat
+                readonly class="w-full p-3 md:p-4 pr-12 border border-gray-300 rounded-md shadow-sm focus:outline-none mb-10 h-[140px]">
+                Tanggal Lahir: 32 Juni 2002 
+                Tempat Lahir: Tabanan 
+                Tinggi: 70Kg  
+                Berat:  700cm  
+                Postur badan: Tunggu kiris  
+                Rambut: Hitam bersinar
+                Mata: Coklat
             </textarea>
             </div>
             </div>

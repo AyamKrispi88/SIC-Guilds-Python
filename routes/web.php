@@ -3,6 +3,8 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuronListUserController;
+use App\Http\Controllers\BuronAdminController;
+use App\Http\Controllers\daftarArtikelUserController;
 
 Route::get('/', function () {
     return view('Admin.MenuBuronan.DetailBuronan');
@@ -60,6 +62,8 @@ Route::get('/pw', function() {
     return view('User.Password-Baru');
 });
 
+Route::get('/daftarArtikelU', [daftarArtikelUserController::class, 'index']);
+
 //Admin 
 
 Route::get('/menu-laporan', function() {
@@ -74,13 +78,6 @@ Route::get('/admin-daftarLaporan', function() {
     return view('Admin.MenuLaporan.DaftarLaporan');
 });
 
-Route::get('/admin-daftarLaporan', function() {
-    return view('Admin.MenuLaporan.DaftarLaporan');
-});
-
-Route::get('/admin-detailLaporan', function() {
-    return view('Admin.MenuLaporan.DetailLaporan');
-});
 
 Route::get('/admin-orangHilang', function() {
     return view('Admin.MenuLaporan.DetailLaporanOrhil');
@@ -95,9 +92,8 @@ Route::get('/daftar-artikel', function() {
     return view('Admin.MenuArtikel.DaftarArtikel');
 });
 
-Route::get('/listburonA', function() {
-    return view('Admin.MenuBuronan.DaftarBuronan');
-});
+Route::get('/daftarBuronA', [BuronAdminController::class, 'index']);
+
 
 
 
