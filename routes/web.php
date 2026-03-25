@@ -95,5 +95,11 @@ Route::get('/daftar-artikel', function() {
 Route::get('/daftarBuronA', [BuronAdminController::class, 'index']);
 
 
+Route::get('/profileadmin', function() {
+    return view('Admin.ProfileAdmin');
+});
 
+Route::get('/notifikasiadmin', function() {
+    return view('Admin.NotifikasiAdmin');
+});
 
