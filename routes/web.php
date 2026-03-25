@@ -103,5 +103,11 @@ Route::get('/listburonA', function() {
     return view('Admin.MenuBuronan.DaftarBuronan');
 });
 
+Route::get('/profileadmin', function() {
+    return view('Admin.ProfileAdmin');
+});
 
+Route::get('/notifikasiadmin', function() {
+    return view('Admin.NotifikasiAdmin');
+});
 
