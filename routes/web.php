@@ -1,23 +1,26 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BuronListUserController;
+use App\Http\Controllers\BuronAdminController;
+use App\Http\Controllers\daftarArtikelUserController;
 
 Route::get('/', function () {
-    return view('Admin.MenuLaporan.DetailLaporan');
+    return view('Admin.MenuBuronan.DetailBuronan');
 });
 
 //testing
 
 Route::get('/tester', function () {
-    return view('Admin.MenuLaporan.DaftarLaporan');
+    return view('User.page_laporan');
 });
 
 //User
 
-//Route::get('/beranda', function() {
-//    return view('User.HomePageUser');
-//});
+Route::get('/beranda', function() {
+    return view('User.HomePageUser');
+});
 
 Route::get('/pakeman', function() {
     return view('User.PakemUser');
@@ -40,9 +43,6 @@ Route::get('/registrasi', function() {
     return view('User.registrasi');
 });
 
-Route::get('/list-buron', function() {
-    return view('User.BuronListUser');
-});
 
 Route::get('/newPassword', function() {
     return view('User.Password-Baru');
@@ -56,13 +56,13 @@ Route::get('/laporan', function () {
     return view('User.laporan');
 });
 
-Route::get('/list-buronan', function() {
-    return view('User.BuronListUser');
-});
+Route::get('/list-buronan', [BuronListUserController::class, 'index']);
 
 Route::get('/pw', function() {
     return view('User.Password-Baru');
 });
+
+Route::get('/daftarArtikelU', [daftarArtikelUserController::class, 'index']);
 
 //Admin 
 
@@ -78,13 +78,6 @@ Route::get('/admin-daftarLaporan', function() {
     return view('Admin.MenuLaporan.DaftarLaporan');
 });
 
-Route::get('/admin-daftarLaporan', function() {
-    return view('Admin.MenuLaporan.DaftarLaporan');
-});
-
-Route::get('/admin-detailLaporan', function() {
-    return view('Admin.MenuLaporan.DetailLaporan');
-});
 
 Route::get('/admin-orangHilang', function() {
     return view('Admin.MenuLaporan.DetailLaporanOrhil');
@@ -99,9 +92,8 @@ Route::get('/daftar-artikel', function() {
     return view('Admin.MenuArtikel.DaftarArtikel');
 });
 
-Route::get('/listburonA', function() {
-    return view('Admin.MenuBuronan.DaftarBuronan');
-});
+Route::get('/daftarBuronA', [BuronAdminController::class, 'index']);
+
 
 Route::get('/profileadmin', function() {
     return view('Admin.ProfileAdmin');

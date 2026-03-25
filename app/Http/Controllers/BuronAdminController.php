@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class BuronListUserController extends Controller
+class BuronAdminController extends Controller
 {
     public $cards;
 
@@ -27,6 +27,6 @@ class BuronListUserController extends Controller
                 ['gmbr' => 'assets/GambarBuron/9.png', 'judul' => 'Ari-ari', 'ket' => 'Tersangka penipuan online melalui media sosial. 3 Juni 2022. Bandung-Jawa Barat']
 
         ];
-        return view('User.BuronListUser', compact('buronan'));
+        return view('Admin.MenuBuronan.DaftarBuronan', compact('buronan'));
     }
 }

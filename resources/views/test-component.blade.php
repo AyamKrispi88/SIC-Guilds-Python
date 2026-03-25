@@ -11,7 +11,7 @@
 <body>
     <x-nav-bar></x-nav-bar>
     <div class=" flex flex-col md:flex-row justify-center items-center w-full md:w-full h-full md:h-full p-20">
-    <x-dropdown-status></x-dropdown-status>
+    <x-admin-statuslaporan/>
     </div>
 
     <x-footer> </x-footer>

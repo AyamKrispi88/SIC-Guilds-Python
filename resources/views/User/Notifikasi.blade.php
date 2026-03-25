@@ -22,7 +22,7 @@
         </p>
 
         <p class="mt-6">
-            – Sincerely, admin123
+            – Sincerely, Rania123
         </p>
 
     </div>
