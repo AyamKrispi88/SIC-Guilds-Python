@@ -1,5 +1,5 @@
 @extends('Admin.PakemAdmin')
-@section('title', 'Detail Artikel Admin')
+@section('title', 'Posting Artikel Admin')
 
 @section('konten')
 <main class="bg-white min-h-screen pb-20">
