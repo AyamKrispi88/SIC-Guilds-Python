@@ -13,7 +13,7 @@ Route::get('/', function () {
 //testing
 
 Route::get('/tester', function () {
-    return view('User.detaillaporanorhil');
+    return view('User.page_isilaporan');
 });
 
 //User
