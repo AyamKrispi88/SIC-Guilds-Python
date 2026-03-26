@@ -137,7 +137,7 @@
             </x-button>
         </div> 
 
-<div class="p-5">
+<div class="hidden p-5">
     <div class="flex flex-col md:flex-row text-left justify-between">
         <div>
             <h1 class="text-[23px] md:text-[40px] font-bold">Laporan Ditemukan Tersangka</h1>
