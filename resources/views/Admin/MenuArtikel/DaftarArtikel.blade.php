@@ -6,10 +6,17 @@
     <div class="w-full h-48 md:h-64 bg-blue-900 relative overflow-hidden">
         <img src="{{ asset('assets/artikelpage.png') }}" 
              class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <div class="relative flex items-center justify-center h-full">
-            <h1 class="text-white text-2xl md:text-5xl font-black border-y-2 border-white py-2 px-4">
+        
+        <div class="relative flex flex-col items-center justify-center h-full">
+            
+            <h1 class="text-transparent border-y-2 border-white py-2 px-6 
+                       text-3xl md:text-6xl font-black tracking-widest
+                       [text-stroke:1.5px_white] md:[text-stroke:2px_white] 
+                       [-webkit-text-stroke:1.5px_white] md:[-webkit-text-stroke:2px_white]
+                       antialiased">
                 BERITA TERKINI
             </h1>
+            
         </div>
     </div>
 
@@ -29,7 +36,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-8 max-w-md md:max-w-none mx-auto">
             
             <x-daftar-artikel 
-                image="{{ asset('assets/patungmacan.png') }}"
+                img="{{ asset('assets/patungmacan.png') }}"
                 title="Berita Keamanan di Sekitar Patung Macan"
                 author="Admin Polisi"
                 content="Terjadi tindak kriminal di jalan patung macan..."
@@ -37,7 +44,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/kejahatan.png') }}"
+                img="{{ asset('assets/kejahatan.png') }}"
                 title="Daerah Rawan Kejahatan Berada di sekitar Denpasar!"
                 author="Admin Polisi"
                 content="Pihak kepolisian telah menandai suatu kawasan di sekitar denpasar menjadi kawasan rawan kejahatan karena banyaknya kasus disana."
@@ -45,7 +52,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/beladiri.png') }}"
+                img="{{ asset('assets/beladiri.png') }}"
                 title="Berikut Merupakan Tips-Tips Untuk Melindungi Diri!"
                 author="Admin Polisi"
                 content="Ketika anda terpaksa berkunjung ke daerah rawan kejahatan, anda setidaknya harus menyiapkan benda-benda ini!"
@@ -53,7 +60,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/patungmacan.png') }}"
+                img="{{ asset('assets/patungmacan.png') }}"
                 title="Berita Keamanan di Sekitar Patung Macan"
                 author="Admin Polisi"
                 content="Terjadi tindak kriminal di jalan patung macan..."
@@ -61,7 +68,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/kejahatan.png') }}"
+                img="{{ asset('assets/kejahatan.png') }}"
                 title="Daerah Rawan Kejahatan Berada di sekitar Denpasar!"
                 author="Admin Polisi"
                 content="Pihak kepolisian telah menandai suatu kawasan di sekitar denpasar menjadi kawasan rawan kejahatan karena banyaknya kasus disana."
@@ -69,7 +76,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/beladiri.png') }}"
+                img="{{ asset('assets/beladiri.png') }}"
                 title="Berikut Merupakan Tips-Tips Untuk Melindungi Diri!"
                 author="Admin Polisi"
                 content="Ketika anda terpaksa berkunjung ke daerah rawan kejahatan, anda setidaknya harus menyiapkan benda-benda ini!"
@@ -77,7 +84,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/patungmacan.png') }}"
+                img="{{ asset('assets/patungmacan.png') }}"
                 title="Berita Keamanan di Sekitar Patung Macan"
                 author="Admin Polisi"
                 content="Terjadi tindak kriminal di jalan patung macan..."
@@ -85,7 +92,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/kejahatan.png') }}"
+                img="{{ asset('assets/kejahatan.png') }}"
                 title="Daerah Rawan Kejahatan Berada di sekitar Denpasar!"
                 author="Admin Polisi"
                 content="Pihak kepolisian telah menandai suatu kawasan di sekitar denpasar menjadi kawasan rawan kejahatan karena banyaknya kasus disana."
@@ -93,7 +100,7 @@
             />
 
             <x-daftar-artikel 
-                image="{{ asset('assets/beladiri.png') }}"
+                img="{{ asset('assets/beladiri.png') }}"
                 title="Berikut Merupakan Tips-Tips Untuk Melindungi Diri!"
                 author="Admin Polisi"
                 content="Ketika anda terpaksa berkunjung ke daerah rawan kejahatan, anda setidaknya harus menyiapkan benda-benda ini!"
