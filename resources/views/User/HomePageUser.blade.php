@@ -39,7 +39,7 @@
         <div>
             <h1 class=" text-black text-4xl text-center font-bold">Berita Terkini</h1>
         </div>
-    <article class="grid grid-cols-1 lg:grid-cols-3 px-[88px] py-[126px] gap-[64px] ">
+    <article class="grid grid-cols-1 lg:grid-cols-3 px-[50px] py-[126px] gap-[64px] ">
     @foreach ($artikel as $berita)
         <x-daftarartikel
         :img="$berita['img']"

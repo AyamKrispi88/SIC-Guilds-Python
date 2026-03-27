@@ -37,7 +37,7 @@
         <div class=" w-48 lg:w-96">
             <x-button variant='generalUse' class=" flex justify-center w-full lg:w-full" href="">Registrasi</x-button>
         </div>
-        <p class=" text-blue-500">Sudah mempunyai akun? <a href="/user-login">Login..</a></p>
+        <p class=" text-blue-500 hover:underline"><a href="/user-login">Sudah mempunyai akun? Login..</a></p>
     </section>
 </main>
 @endsection

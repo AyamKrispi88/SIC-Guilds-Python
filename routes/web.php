@@ -7,9 +7,9 @@ use App\Http\Controllers\BuronAdminController;
 use App\Http\Controllers\daftarArtikelUserController;
 use App\Http\Controllers\berandaUserController;
 
-Route::get('/', function () {
-    return view('Admin.MenuBuronan.DetailBuronan');
-});
+Route::get('/', [berandaUserController::class, 'index']);
+
+
 
 //testing
 
@@ -17,9 +17,9 @@ Route::get('/tester', function () {
     return view('User.page_isilaporan');
 });
 
-//User
-Route::get('/beranda', [berandaUserController::class, 'index']);
 
+
+//User
 Route::get('/pakeman', function() {
     return view('User.PakemUser');
 });
@@ -51,7 +51,7 @@ Route::get('/profile-user', function () {
 });
 
 Route::get('/laporan', function () {
-    return view('User.laporan');
+    return view('User.page_isilaporan');
 });
 
 Route::get('/list-buronan', [BuronListUserController::class, 'index']);
@@ -63,6 +63,10 @@ Route::get('/pw', function() {
 Route::get('/daftarArtikelU', [daftarArtikelUserController::class, 'index']);
 
 //Admin 
+
+Route::get('/Admin-detailburonan', function () {
+    return view('Admin.MenuBuronan.DetailBuronan');
+});
 
 Route::get('/menu-laporan', function() {
     return view('Admin.MenuLaporan.DetailLaporan');
