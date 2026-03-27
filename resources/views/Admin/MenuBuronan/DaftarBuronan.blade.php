@@ -30,8 +30,8 @@
             class="w-[50%] border border-gray-300 rounded-md shadow focus:outline-none placeholder-gray-400 px-2 py-2">
     </div>
 
-    <x-button variant="transparent" class="text-blue-500 bg-white font-bold md:py-2 md:px-4 px-3 py-1 rounded text-center">
-        <span class="font-medium">Hapus</span>
+    <x-button href="/admin-postingburonan" variant="generalUse" class="font-bold md:py-2 md:px-4 px-3 py-1 rounded text-center whitespace-nowrap">
+        <span class="font-medium">Unggah Buronan</span>
     </x-button>
     </div>
 

@@ -26,15 +26,15 @@
                 <input type="text" placeholder="Cari:" 
                        class="w-full shadow-lg rounded-full px-12 py-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm">
             </div>
-            <button class="shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-bold shadow-md transition-all text-xs whitespace-nowrap">
+            <x-button href="/admin-postingaratikel" variant="generalUse" class="shrink-0 px-6 py-2.5 rounded-lg font-bold shadow-md transition-all text-xs whitespace-nowrap">
                 Buat Artikel Baru
-            </button>
+            </x-button>
         </div>
     </div>
 
     <div class="w-full mx-auto px-4 md:px-10 mt-20 mb-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-8 max-w-md md:max-w-none mx-auto">
-            
+
             <x-daftar-artikel 
                 img="{{ asset('assets/patungmacan.png') }}"
                 title="Berita Keamanan di Sekitar Patung Macan"

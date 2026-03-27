@@ -81,5 +81,36 @@
 
 </div>
 
+        <div class="edit-profil hidden flex flex-col md:flex-row items-center md:items-start gap-12 pt-10 border-t border-gray-50">
+            <div class="w-full md:w-2/5 flex justify-center">
+                <img src="{{ asset('assets/profileadmin.png') }}" 
+                     class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-8 border-white opacity-80">
+            </div>
+
+            <div class="w-full md:w-3/5 space-y-6">
+                <div>
+                    <label class="text-black text-lg font-normal">Username</label>
+                    <input type="text" placeholder="Hihi!!" class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom outline-none bg-white">
+                </div>
+                <div>
+                    <label class="text-black text-lg font-normal">Email</label>
+                    <input type="text" placeholder="Edi@gmail.com" class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom outline-none bg-white">
+                </div>
+                <div>
+                    <label class="text-black text-lg font-normal">Nama Lengkap</label>
+                    <input type="text" placeholder="Thomas Alva Edisound" class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom outline-none bg-white">
+                </div>
+                <div>
+                    <label class="text-black text-lg font-normal">Password</label>
+                    <input type="password" placeholder="admin123" class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom outline-none bg-white">
+                </div>
+                <button class="w-full bg-[#4A76FD] text-white text-xl font-bold py-5 rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
+                    Simpan Perubahan
+                </button>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>

@@ -1,3 +1,5 @@
+@vite(['resources/js/DropdownStatusLaporan.js'])
+
 <div class="dropdown-statuslaporan-wrapper relative">
     <div class="dropdown-statuslaporan-trigger block w-full bg-white p-3 md:p-4 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 cursor-pointer">
         <span class="selected-statuslaporan-text text-black gap-5 flex items-center">
