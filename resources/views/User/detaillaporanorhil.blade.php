@@ -21,7 +21,7 @@
 
         <div class="hidden md:flex gap-3 items-center">
             <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
-            Edit Laporan
+            Buat Laporan
             </x-button>
 
             <x-button variant="transpar" class="whitespace-nowrap hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg">

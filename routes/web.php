@@ -14,14 +14,14 @@ Route::get('/', [berandaUserController::class, 'index']);
 //testing
 
 Route::get('/tester', function () {
-    return view('Admin.ProfileAdmin');
+    return view('User.detaillaporanorhil');
 });
 
 
 
 //User
 Route::get('/pakeman', function() {
-    return view('User.PakemUser');
+    return view('User.HomePageWeb');
 });
 
 
