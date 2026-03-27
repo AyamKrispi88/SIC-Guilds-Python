@@ -27,7 +27,7 @@
         
         <div class=" flex flex-col w-full lg:w-72 items-center pt-6">
             <x-button variant="generalUse" class=" text-center lg:w-full" href="">Login</x-button>
-            <a class=" text-blue-600 hover:underline" href="">Belum mempunyai akun? Registrasi...</a>
+            <a class=" text-blue-600 hover:underline" href="/registrasi">Belum mempunyai akun? Registrasi...</a>
         </div>
     </div>
 </main>

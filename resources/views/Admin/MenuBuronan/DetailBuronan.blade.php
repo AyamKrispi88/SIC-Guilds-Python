@@ -25,7 +25,7 @@
         </div>
 
         <div class="hidden md:block md:flex md:gap-3">
-            <x-admin-statuslaporan></x-admin-statuslaporan>
+            <x-admin-statuslaporan/>
 
             <x-button href="/admin-postingburonan" variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Edit Laporan
