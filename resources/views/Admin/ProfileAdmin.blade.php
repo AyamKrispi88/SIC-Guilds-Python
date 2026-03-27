@@ -69,13 +69,13 @@
                     <label class="text-black text-lg font-normal">Password</label>
                     <input type="password" value="......" readonly class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom bg-white">
                 </div>
-                <button class="w-full bg-[#4A76FD] text-white text-xl font-bold py-5 rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
+                <x-button variant="generalUse" trigger-edit class="w-full font-bold py-5 rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
                     Edit Profile
-                </button>
+                </x-button>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-12 pt-10 border-t border-gray-50">
+        <div class="edit-profil hidden flex flex-col md:flex-row items-center md:items-start gap-12 pt-10 border-t border-gray-50">
             <div class="w-full md:w-2/5 flex justify-center">
                 <img src="{{ asset('assets/profileadmin.png') }}" 
                      class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-8 border-white opacity-80">
