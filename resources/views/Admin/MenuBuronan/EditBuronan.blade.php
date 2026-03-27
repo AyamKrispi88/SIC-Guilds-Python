@@ -13,7 +13,7 @@
     </section>
 
     <div class="px-5 py-5">
-        <h1 class="text-[23px] md:text-[40px] font-bold mb-3">Unggah Buronan</h1>
+        <h1 class="text-[23px] md:text-[40px] font-bold mb-3">Edit Buronan</h1>
         <div class="flex flex-col md:flex-row justify-between items-center gap-5 mb-8 px-5 py-5">
             <div>
                 <div class="w-full flex flex-col items-center md:items-start">

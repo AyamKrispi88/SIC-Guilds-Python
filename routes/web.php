@@ -14,7 +14,7 @@ Route::get('/', function () {
 //testing
 
 Route::get('/tester', function () {
-    return view('User.page_isilaporan');
+    return view('Admin.MenuArtikel.DetailArtikelAdmin');
 });
 
 //User
@@ -100,4 +100,14 @@ Route::get('/profileadmin', function() {
 Route::get('/notifikasiadmin', function() {
     return view('Admin.NotifikasiAdmin');
 });
+
+Route::get('/admin-postingaratikel', function() {
+    return view('Admin.MenuArtikel.PostingArtikelAdmin');
+});
+
+Route::get('/admin-postingburonan', function() {
+    return view('Admin.MenuBuronan.UploadBuronan');
+});
+
+
 

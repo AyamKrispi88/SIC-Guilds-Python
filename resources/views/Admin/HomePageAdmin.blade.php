@@ -5,7 +5,7 @@
                  class="absolute inset-0 w-full h-full object-cover opacity-60">
             <div class="relative flex flex-col items-start justify-center h-full px-10 md:px-20 text-white">
                 <div class="border-b border-white/50 pb-2">
-                    <h1 style="font-family: 'Stardos Stencil', system-ui;" class="text-3xl md:text-5xl font-bold tracking-tight leading-tight uppercase">
+                    <h1 class="font-stardos-stencil text-3xl md:text-5xl font-bold tracking-tight leading-tight uppercase">
                         Selamat Datang Di <br> 
                         <span class="tracking-widest">Lapor Pak!!</span>
                     </h1>
