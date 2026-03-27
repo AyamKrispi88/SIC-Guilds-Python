@@ -27,7 +27,7 @@
         <div class="hidden md:block md:flex md:gap-3">
             <x-admin-statuslaporan></x-admin-statuslaporan>
 
-            <x-button href="/admin-postingburonan" variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
+            <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Edit Laporan
             </x-button>
 
@@ -132,12 +132,12 @@
         </div> 
 
 <div class="flex px-4 justify-center mb-5">
-    <x-button variant="generalUse" class="trigger-upload-laporan w-full hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
+    <x-button variant="generalUse" class="w-full hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Lihat Laporan Masuk
             </x-button>
         </div> 
 
-<div class="isi-laporan-masuk hidden p-5">
+<div class="hidden p-5">
     <div class="flex flex-col md:flex-row text-left justify-between">
         <div>
             <h1 class="text-[23px] md:text-[40px] font-bold">Laporan Ditemukan Tersangka</h1>

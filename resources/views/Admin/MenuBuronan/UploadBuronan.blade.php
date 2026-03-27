@@ -94,7 +94,7 @@
 
 <div class="w-full flex justify-center pb-5">
     <button class="bg-blue-600 text-white px-4 py-2 rounded-md">
-        Posting Buronan
+        Hapus Laporan
     </button>
 </div>
 

@@ -2,7 +2,7 @@
 @section('title', 'Posting Artikel Admin')
 
 @section('konten')
-<main class="bg-white min-h-screen pb-20 font-poppins">
+<main class="bg-white min-h-screen pb-20">
     <div class="w-full h-48 md:h-64 bg-blue-900 relative overflow-hidden">
         <img src="{{ asset('assets/artikelpage.png') }}" 
              class="absolute inset-0 w-full h-full object-cover opacity-60">
@@ -58,7 +58,7 @@
         </div>
 
         <div class="flex justify-center mt-12">
-            <button class="w-full md:w-auto min-w-[250px] bg-[#4477FF] text-white px-10 py-3.5 rounded-lg font-light shadow-lg hover:bg-blue-700">
+            <button class="w-full md:w-auto min-w-[250px] bg-[#4477FF] text-white px-10 py-3.5 rounded-lg font-light shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-200 tracking-wider">
                 Posting Artikel
             </button>
         </div>
