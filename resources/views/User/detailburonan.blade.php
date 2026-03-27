@@ -108,12 +108,12 @@ Mata: Coklat
         </div>
     </div>
         <div class="flex gap-3 justify-center mb-5 px-4">
-            <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
+            <x-button variant="generalUse" class="trigger-upload-laporan w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Buat Laporan Ditemukan
             </x-button>
         </div> 
 
-<div class="p-5">
+<div class="upload-laporan-ditemukan hidden p-5">
     <div class="flex flex-col md:flex-row text-left justify-between">
         <div>
             <h1 class="text-[23px] md:text-[40px] font-bold">Laporan Ditemukan Tersangka</h1>

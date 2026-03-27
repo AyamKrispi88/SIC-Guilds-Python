@@ -2,7 +2,7 @@
 @section('title', 'Detail Artikel Admin')
 
 @section('konten')
-<main class="bg-white min-h-screen pb-20">
+<main class="bg-white min-h-screen pb-20 font-poppins">
     <div class="w-full h-48 md:h-64 bg-blue-900 relative overflow-hidden">
         <img src="{{ asset('assets/artikelpage.png') }}" 
              class="absolute inset-0 w-full h-full object-cover opacity-60">
@@ -28,10 +28,10 @@
         </h1>
         
         <div class="hidden md:flex gap-4">
-            <button class="bg-[#4477FF] text-white px-7 py-2.5 rounded-lg font-medium shadow-md hover:bg-blue-700 transition">
+            <button class="bg-[#4477FF] text-white px-7 py-2.5 rounded-lg font-medium shadow-md hover:bg-blue-700">
                 Perbarui Artikel
             </button>
-            <button class="border-2 border-[#4477FF] text-[#4477FF] px-7 py-2.5 rounded-lg font-medium hover:bg-blue-50 transition">
+            <button class="border-2 border-[#4477FF] text-[#4477FF] px-7 py-2.5 rounded-lg font-medium hover:bg-blue-50">
                 Hapus Artikel
             </button>
         </div>
@@ -69,7 +69,7 @@
     </div>
 
     <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mt-10 md:hidden">
-        <button class="w-full max-w-[300px] bg-[#4477FF] text-white px-7 py-3 rounded-lg font-medium shadow-md">
+        <button href="/admin-postingaratikel" class="w-full max-w-[300px] bg-[#4477FF] text-white px-7 py-3 rounded-lg font-medium shadow-md">
             Perbarui Artikel
         </button>
         <button class="w-full max-w-[300px] border-2 border-[#4477FF] text-[#4477FF] px-7 py-3 rounded-lg font-medium">
