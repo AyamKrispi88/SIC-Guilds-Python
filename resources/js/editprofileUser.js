@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (isHidden) {
                 containerLaporan.classList.remove('hidden');
-                btnToggle.innerText = 'Tutup Laporan';
+                btnToggle.innerText = 'Edit Profile';
             } else {
                 containerLaporan.classList.add('hidden');
-                btnToggle.innerText = 'Lihat Laporan Masuk';
+                btnToggle.innerText = 'Perbarui';
             }
         });
     }

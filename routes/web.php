@@ -14,7 +14,7 @@ Route::get('/', [berandaUserController::class, 'index']);
 //testing
 
 Route::get('/tester', function () {
-    return view('Admin.ProfileAdmin');
+    return view('User.HomePageUser');
 });
 
 
@@ -23,7 +23,7 @@ Route::get('/tester', function () {
 
 //Pakem
 Route::get('/pakeman', function() {
-    return view('User.PakemUser');
+    return view('User.HomePageWeb');
 });
 
 Route::get('/pakemanA', function() {
