@@ -1,6 +1,17 @@
-@extends('Admin.PakemAdmin')
-@section('title', 'Detail Buronan')
-@section('konten')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ asset('assets/logo2.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield('title')</title>
+     @vite(['resources/css/app.css', 'resources/js/home.js'])
+     @include('FontDLainnya.Font')
+    @vite('resources/js/CekLaporanBuron.js')
+</head>
+<body>
+    <x-navbar-admin></x-navbar-admin>
 <main class="font-poppins">
     <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/daftartersangka.png') }}')">
         <div class="absolute inset-0"></div>
@@ -132,7 +143,7 @@
         </div> 
 
 <div class="flex px-4 justify-center mb-5">
-    <x-button variant="generalUse" class="trigger-upload-laporan w-full hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
+    <x-button variant="generalUse" class="trigger-laporan w-full hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Lihat Laporan Masuk
             </x-button>
         </div> 
@@ -207,4 +218,6 @@
 
 </main> 
 
-@endsection
+    <x-footer> </x-footer>
+</body>
+</html>

@@ -88,7 +88,7 @@ Route::get('/notifikasiU', function () {
     return view('User.Notifikasi');
 });
 
-Route::get('/detailBuronan', function () {
+Route::get('/isiLaporanOrangHilangUser', function () {
     return view('User.page_isilaporanoranghilang');
 });
 
