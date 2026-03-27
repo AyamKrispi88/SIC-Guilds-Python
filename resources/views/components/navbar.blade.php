@@ -28,10 +28,10 @@
             </div>
             </section>
 <!-- Mobail -->
-            <div class="propail relative lg:hidden">
-                <img class=" size-8 rounded-full object-cover" src="assets\hutawi.webp" alt="">
+            <div id="mobile-avatar-wrapper" class="propail relative lg:hidden">
+                <img id="avatar-btn" class=" size-8 rounded-full object-cover" src="assets\hutawi.webp" alt="">
 <!-- Dropdown -->
-            <section class=" absolute flex flex-col md:flex-row gap-2 right-0 w-40 bg-white border shadow-lg rounded-sm z-50 px-1 py-2">
+            <section id="mobile-menu" class=" absolute hidden flex-col md:flex-row gap-2 right-0 w-40 bg-white border shadow-lg rounded-sm z-50 px-1 py-2">
             <div class="  flex flex-col md:flex-row gap-2"> <!--Ntar atur di js ini biar hidden di mobile, sekarang kita biarin gini aja -->
             <div class="propail flex flex-row items-center gap-1 border rounded-sm py-1 px-8">
                 <img class=" size-8 rounded-full object-cover" src="assets\hutawi.webp" alt="">
@@ -59,3 +59,5 @@
 
 </header>
     <!-- Nothing worth having comes easy. - Theodore Roosevelt -->
+
+@vite('resources/js/navbarUser.js')

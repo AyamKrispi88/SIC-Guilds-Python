@@ -31,7 +31,7 @@
         </div>
     </section>
     <div class=" flex self-end gap-3">
-        <x-button href="" variant="generalUse"> Mulai Buat Laporan </x-button>
+        <x-button href="/Buatlaporan" variant="generalUse"> Mulai Buat Laporan </x-button>
         <x-button href="" variant="transpar"> Lihat Daftar Laporanmu </x-button>
     </div>
     </section>
