@@ -36,17 +36,17 @@
                 <div>
                     <label class="block text-lg font-bold text-black mb-2">Nama Artikel</label>
                     <input type="text" value="Tuliskan nama artikel" 
-                        class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.07)] rounded-md focus:outline-none focus:border-blue-500 text-gray-800 text-sm md:text-base">
+                        class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none text-gray-800 text-sm md:text-base">
                 </div>
                 <div>
                     <label class="block text-lg font-bold text-black mb-2">Sumber Website Artikel</label>
-                    <input type="text" value="Tuliskan sumber artikel" 
-                        class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.07)] rounded-md focus:outline-none focus:border-blue-500 text-gray-800 text-sm md:text-base">
+                    <input type="text" placeholder="Tuliskan sumber artikel" 
+                        class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none  text-black text-sm md:text-base">
                 </div>
                 <div>
                     <label class="block text-lg font-bold text-black mb-2">Link Artikel Website</label>
-                    <input type="text" value="Tuliskan link artikel disini" 
-                        class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.07)] rounded-md focus:outline-none focus:border-blue-500 text-gray-800 text-sm md:text-base">
+                    <input type="text" placeholder="Tuliskan link artikel disini" 
+                        class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none text-black text-sm md:text-base">
                 </div>
             </div>
         </div>
@@ -54,13 +54,13 @@
         <div class="mt-10 text-left">
             <label class="block text-lg font-bold text-black mb-2">Deskripsi Singkat Artikel</label>
             <textarea rows="6" 
-                class="w-full p-5 bg-white border-b-4 border-gray-100 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.07)] rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 text-gray-600 italic leading-relaxed text-sm md:text-base">Tuliskan deskripsi singkat artikel</textarea>
+                class="w-full p-5 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none focus:ring-1 text-black text-sm md:text-base" placeholder="Tuliskan deskripsi singkat artikel"></textarea>
         </div>
 
         <div class="flex justify-center mt-12">
-            <button class="w-full md:w-auto min-w-[250px] bg-[#4477FF] text-white px-10 py-3.5 rounded-lg font-light shadow-lg hover:bg-blue-700">
+            <x-button variant="generalUse" class="w-full md:w-auto min-w-[250px] text-white px-10 py-3.5 rounded-lg font-light shadow-lg ">
                 Posting Artikel
-            </button>
+            </x-button>
         </div>
 
     </div>

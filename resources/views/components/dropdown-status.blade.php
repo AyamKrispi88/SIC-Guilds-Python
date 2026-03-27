@@ -1,3 +1,5 @@
+@vite(['resources/js/DropdownStatus.js'])
+
 <div class="dropdown-status-wrapper relative inline-block text-left">
     <div class="dropdown-status-trigger bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-lg cursor-pointer inline-flex items-center w-full md:w-64">
         <span class="selected-status-text text-white font-semibold gap-5 flex items-center text-md">

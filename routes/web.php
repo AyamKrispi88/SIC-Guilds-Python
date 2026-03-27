@@ -14,7 +14,7 @@ Route::get('/', function () {
 //testing
 
 Route::get('/tester', function () {
-    return view('Admin.MenuArtikel.DetailArtikelAdmin');
+    return view('User.page_isilaporan');
 });
 
 //User
