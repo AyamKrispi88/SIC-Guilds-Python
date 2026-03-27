@@ -40,10 +40,15 @@
             <h1 class=" text-black text-4xl text-center font-bold">Berita Terkini</h1>
         </div>
     <article class="grid grid-cols-1 lg:grid-cols-3 px-[88px] py-[126px] gap-[64px] ">
-        <p>anjay</p>
-        <p>anjay</p>
-        <p>anjay</p>
-        <p>anjay</p>
+    @foreach ($artikel as $berita)
+        <x-daftarartikel
+        :img="$berita['img']"
+        :title="$berita['title']"
+        :content="$berita['content']"
+        :author="$berita['author']"
+        :url="$berita['url']"
+        />
+    @endforeach
     </article>
     <div class=" w-full gap-6 md:w-full flex justify-center">
     <x-button href="" variant="generalUse">Eksplor Lebih Banyak</x-button>

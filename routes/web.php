@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuronListUserController;
 use App\Http\Controllers\BuronAdminController;
 use App\Http\Controllers\daftarArtikelUserController;
+use App\Http\Controllers\berandaUserController;
 
 Route::get('/', function () {
     return view('Admin.MenuBuronan.DetailBuronan');
@@ -17,10 +18,7 @@ Route::get('/tester', function () {
 });
 
 //User
-
-Route::get('/beranda', function() {
-    return view('User.HomePageUser');
-});
+Route::get('/beranda', [berandaUserController::class, 'index']);
 
 Route::get('/pakeman', function() {
     return view('User.PakemUser');
