@@ -6,7 +6,8 @@
 <title>Profile</title>
 @vite(['resources/css/app.css', 'resources/js/home.js'])
 @include('FontDLainnya.Font')
-    <link rel="icon" href="{{ asset('assets/logo1.png') }}">
+<link rel="icon" href="{{ asset('assets/logo1.png') }}">
+@vite('resources/js/editprofileUser.js')
 </head>
 
 <body class="bg-gray-100">
@@ -20,8 +21,8 @@
 
 
 
-<div class="isikontenduanya flex gap-14 px-10 justify-center">
-
+<div class="isikontenduanya flex flex-col gap-14 px-10 justify-center">
+   <section class=" w-full h-auto flex flex-row justify-center gap-20">
     <div class="">
         <img src="assets/fotoprofil.png"
              class="w-80 h-80 rounded-full object-cover">
@@ -77,9 +78,9 @@
             </div>
         </div>
 
-        <x-button variant="generalUse">Edit Profil</x-button>
-
-</div>
+        <x-button class="trigger-edit" variant="generalUse">Edit Profil</x-button>
+    </div>
+</section>
 
         <div class="edit-profil hidden flex flex-col md:flex-row items-center md:items-start gap-12 pt-10 border-t border-gray-50">
             <div class="w-full md:w-2/5 flex justify-center">

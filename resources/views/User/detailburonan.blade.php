@@ -1,6 +1,17 @@
-@extends('User.PakemUser')
-@section('title', 'Detail Buronan')
-@section('konten')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ asset('assets/logo1.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detail Buronan</title>
+     @vite(['resources/css/app.css', 'resources/js/home.js'])
+     @include('FontDLainnya.Font')
+     @vite('resources/js/BuatLaporanBuron.js')
+</head>
+<body>
+    <x-nav-bar></x-nav-bar>
 <main class="font-poppins">
     <section class="gambar relative w-full lg:w-full h-[118px] lg:h-[321px] text-white bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('assets/daftartersangka.png') }}')">
         <div class="absolute inset-0"></div>
@@ -171,5 +182,6 @@ Mata: Coklat
 </div>        
 
 </main> 
-
-@endsection
+    <x-footer> </x-footer>
+</body>
+</html>

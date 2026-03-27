@@ -7,6 +7,7 @@
     <title>Profile Admin</title>
     @vite(['resources/css/app.css', 'resources/js/home.js'])
     @include('FontDLainnya.Font')
+    @vite('resources/js/EditProfile.js')
     <style>
         body { font-family: 'Poppins', sans-serif; }
         
@@ -69,7 +70,7 @@
                     <label class="text-black text-lg font-normal">Password</label>
                     <input type="password" value="......" readonly class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom bg-white">
                 </div>
-                <x-button variant="generalUse" trigger-edit class="w-full font-bold py-5 rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
+                <x-button variant="generalUse" trigger-edit class="trigger-edit w-full font-bold py-5 rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
                     Edit Profile
                 </x-button>
             </div>
