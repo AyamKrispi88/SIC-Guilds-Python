@@ -7,14 +7,15 @@ use App\Http\Controllers\BuronAdminController;
 use App\Http\Controllers\daftarArtikelUserController;
 use App\Http\Controllers\berandaUserController;
 
-Route::get('/', [berandaUserController::class, 'index']);
+
+Route::get('/', [berandaUserController::class, 'index']);//ini beranda
 
 
 
 //testing
 
 Route::get('/tester', function () {
-    return view('User.HomePageUser');
+    return view('User.HomePageUser');//ini salah
 });
 
 
