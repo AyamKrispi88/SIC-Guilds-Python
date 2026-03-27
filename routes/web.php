@@ -62,7 +62,7 @@ Route::get('/profile-user', function () {
 
 //page user
 
-Route::get('/laporan', function () {
+Route::get('/Buatlaporan', function () {
     return view('User.page_isilaporan');
 });
 
@@ -92,7 +92,7 @@ Route::get('/detailBuronan', function () {
     return view('User.page_isilaporanoranghilang');
 });
 
-Route::get('/detailBuronan', function () {
+Route::get('/laporan', function () {
     return view('User.page_laporan');
 });
 
