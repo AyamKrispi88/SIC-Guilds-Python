@@ -12,7 +12,7 @@ Route::get('/', [berandaUserController::class, 'index']);//ini beranda
 
 
 
-//testing
+//testing//
 
 Route::get('/tester', function () {
     return view('User.HomePageUser');//ini salah
