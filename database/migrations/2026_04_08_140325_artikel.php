@@ -14,8 +14,11 @@ return new class extends Migration
             Schema::create('artikel', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
+            $table->string('gambar_artikel', 255);
+            $table->text('deskripsi');
+            $table->string('link', 255);
             $table->timestamps();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained('users');
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('artikel');
     }
 };

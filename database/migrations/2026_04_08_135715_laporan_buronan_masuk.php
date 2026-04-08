@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('laporan_buronan_masuk', function (Blueprint $table) {
+            $table->id();
+            $table->enum('status_laporan', ['diterima', 'ditolak']);
+            $table->date('tanggal_menemukan');
+            $table->string('tempat_menemukan', 255);
+            $table->text('keterangan');
+            // $table->foreignId('buron_id')->constrained('buronan');
+            $table->foreignId('user_id')->constrained('users');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('laporan_buronan_masuk');
     }
 };

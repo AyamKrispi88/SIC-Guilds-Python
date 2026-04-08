@@ -11,7 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('laporan_biasa', function (Blueprint $table) {
+            $table->id();
+            $table->enum('jenis_laporan', ['Kepadatan Lalu Lintas', 'Kasus Kriminal', 'Orang Hilang']);
+            $table->date('tanggal_kejadian');
+            $table->string('lokasi_kejadian', 255);
+            $table->text('deskripsi_kejadian');
+            $table->string('foto_kejadian', 255);
+            $table->enum('status_laporan', ['Sudah diproses', 'Masih diproses', 'Belum diproses']);
+            $table->foreignId('user_id')->constrained('users');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('laporan_biasa');
     }
 };
