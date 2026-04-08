@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class LaporanBuronanMasuk extends Model
 {
-    //
+    public function user() {
+    return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function buronan() {
+    return $this->hasOne(Buronan::class, 'user_id');
+    }
 }
