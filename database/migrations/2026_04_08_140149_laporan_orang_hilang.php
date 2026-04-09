@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('laporan_orang_hilang', function (Blueprint $table) {
             $table->id();
-            $table->enum('kejahatan', ['Kepadatan Lalu Lintas', 'Kasus Kriminal', 'Orang Hilang']);
+            $table->enum('jenis_laporan', ['Kepadatan Lalu Lintas', 'Kasus Kriminal', 'Orang Hilang']);
             $table->date('tanggal_hilang');
             $table->string('lokasi_terakhir', 255);
             $table->string('nama_lengkap', 255);

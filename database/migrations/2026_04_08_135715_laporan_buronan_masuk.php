@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('tanggal_menemukan');
             $table->string('tempat_menemukan', 255);
             $table->text('keterangan');
-            $table->foreignId('buron_id')->constrained('buronan');
+            // $table->foreignId('buron_id')->constrained('buronan');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
