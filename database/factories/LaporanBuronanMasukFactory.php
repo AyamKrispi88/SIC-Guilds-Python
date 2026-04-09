@@ -22,6 +22,7 @@ class LaporanBuronanMasukFactory extends Factory
             'tanggal_menemukan' => $this->faker->date(),
             'tempat_menemukan' => $this->faker->address(),
             'keterangan' => $this->faker->paragraph(),
+            'buron_id' => \App\Models\Buronan::factory(),
             'user_id' => \App\Models\User::factory(),
         ];
     }
