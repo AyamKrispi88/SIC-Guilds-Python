@@ -28,12 +28,16 @@
         </h1>
         
         <div class="hidden md:flex gap-4">
+            <a href="/admin-editArtikel">
             <x-button variant="generalUse" class="bg-[#4477FF] text-white px-7 py-2.5 rounded-lg font-medium shadow-md hover:bg-blue-700">
-                Perbarui Artikel
+                Edit Artikel
             </x-button>
+            </a>
+            <a href="/daftar-artikel">
             <x-button variant="transpar" class="border-2 px-7 py-2.5 rounded-lg font-medium hover:bg-blue-50">
                 Hapus Artikel
             </x-button>
+            </a>
         </div>
     </div>
 
@@ -51,12 +55,12 @@
             </div>
             <div>
                 <label class="block text-lg font-bold text-black mb-2">Sumber Website Artikel</label>
-                <input type="text" value="Wiwiwi.com" 
+                <input type="text" readonly value="Wiwiwi.com" 
                     class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none text-blaack text-sm md:text-base">
             </div>
             <div>
                 <label class="block text-lg font-bold text-black mb-2">Link Artikel Website</label>
-                <input type="text" value="https://wiwiwi.com" 
+                <input type="text" readonly value="https://wiwiwi.com" 
                     class="w-full p-3.5 md:p-4 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none text-black text-sm md:text-base">
             </div>
         </div>
@@ -65,16 +69,20 @@
     <div class="mt-10 text-left">
         <label class="block text-lg font-bold text-black mb-2">Deskripsi Singkat Artikel</label>
         <textarea rows="6" 
-            class="w-full p-5 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 text-black text-sm md:text-base">artikel merupakan salah satu bentuk karya tulis yng diposting di internet.</textarea>
+            class="w-full p-5 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400 text-black text-sm md:text-base" readonly>artikel merupakan salah satu bentuk karya tulis yng diposting di internet.</textarea>
     </div>
 
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mt-10 md:hidden">
-        <x-button variant="generalUse" href="/admin-postingaratikel" class="w-full max-w-[300px] bg-[#4477FF] text-white px-7 py-3 rounded-lg font-medium shadow-md text-center">
+    <div class="flex sm:flex-row justify-center items-center gap-3 mt-10 md:hidden">
+        <a href="/admin-editArtikel">
+        <x-button variant="generalUse" class="w-full bg-[#4477FF] text-white px-7 py-3 rounded-lg font-medium shadow-md text-center">
             Edit Artikel
         </x-button>
-        <x-button variant="transpar" class="w-full max-w-[300px] border-2 border-[#4477FF] text-[#4477FF] px-7 py-3 rounded-lg text-center font-medium">
+        </a>
+        <a href="/daftar-artikel">
+        <x-button variant="transpar" class="w-full border-2 border-[#4477FF] text-[#4477FF] px-7 py-3 rounded-lg text-center font-medium">
             Hapus Artikel
         </x-button>
+        </a>
     </div>
 
 </div>

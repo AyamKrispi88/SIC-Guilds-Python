@@ -58,9 +58,11 @@
         </div>
 
         <div class="flex justify-center mt-12">
+            <a href="/admin-detailArtikel">
             <x-button variant="generalUse" class="w-full md:w-auto min-w-[250px] text-white px-10 py-3.5 rounded-lg font-light shadow-lg ">
                 Posting Artikel
             </x-button>
+            </a>
         </div>
 
     </div>

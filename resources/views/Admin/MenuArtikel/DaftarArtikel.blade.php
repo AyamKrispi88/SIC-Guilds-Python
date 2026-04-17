@@ -26,7 +26,7 @@
                 <input type="text" placeholder="Cari:" 
                        class="w-full shadow-lg rounded-full px-12 py-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm">
             </div>
-            <x-button href="/admin-postingaratikel" variant="generalUse" class="shrink-0 px-6 py-2.5 rounded-lg font-bold shadow-md transition-all text-xs whitespace-nowrap">
+            <x-button href="/admin-postArtikel" variant="generalUse" class="shrink-0 px-6 py-2.5 rounded-lg font-bold shadow-md transition-all text-xs whitespace-nowrap">
                 Buat Artikel Baru
             </x-button>
         </div>

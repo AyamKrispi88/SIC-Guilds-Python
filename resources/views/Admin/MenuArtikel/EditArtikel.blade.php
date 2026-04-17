@@ -28,12 +28,16 @@
         </h1>
         
         <div class="hidden md:flex gap-4">
+            <a href="/admin-detailArtikel">
             <button class="bg-[#4477FF] text-white px-7 py-2.5 rounded-lg font-medium shadow-md hover:bg-blue-700">
                 Perbarui Artikel
             </button>
+            </a>
+            <a href="/daftar-artikel">
             <button class="border-2 border-[#4477FF] text-[#4477FF] px-7 py-2.5 rounded-lg font-medium hover:bg-blue-50">
                 Hapus Artikel
             </button>
+            </a>
         </div>
     </div>
 
@@ -68,10 +72,17 @@
             class="w-full p-5 bg-white border-b-4 border-gray-100 shadow rounded-md focus:outline-none focus:ring-1 text-black text-sm md:text-base">artikel merupakan salah satu bentuk karya tulis yng diposting di internet.</textarea>
     </div>
 
-<div class="w-full flex justify-center pb-5">
+<div class="w-full lg:hidden flex justify-center pb-5 gap-4">
+    <a href="/admin-detailArtikel">
     <x-button variant="generalUse" class="px-4 py-2 rounded-md">
         Update Artikel
     </x-button>
+    </a>
+    <a href="/daftar-artikel">
+    <x-button variant="generalUse" class="px-4 py-2 rounded-md">
+        Update Artikel
+    </x-button>
+    </a>
 </div>
 
 </div>
