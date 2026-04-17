@@ -51,26 +51,28 @@ Route::middleware('auth')->group(function () {
 });
 
 //                      ADMIN                       //
-Route::prefix('admin-panel')->group(function () {
-    Route::get('/', function() { return view('Admin.HomePageAdmin'); });
-    Route::get('/profile', function() { return view('Admin.ProfileAdmin'); });
-    Route::get('/notifikasi', function() { return view('Admin.NotifikasiAdmin'); });
+// --- Page Biasa & Akun ---
+Route::get('/admin', function() { return view('Admin.HomePageAdmin'); });
+Route::get('/login-admin', function() { return view('Admin.LoginAdmin'); });
+Route::get('/profileadmin', function() { return view('Admin.ProfileAdmin'); });
+Route::get('/notifikasiadmin', function() { return view('Admin.NotifikasiAdmin'); });
 
-    // Admin - Menu Buronan
-    Route::get('/daftar-buron', [BuronAdminController::class, 'index']);
-    Route::get('/detail-buron', function () { return view('Admin.MenuBuronan.DetailBuronan'); });
-    Route::get('/upload-buron', function() { return view('Admin.MenuBuronan.UploadBuronan'); });
-    Route::get('/edit-buron', function() { return view('Admin.MenuBuronan.EditBuronan'); });
+// --- Menu Buronan ---
+Route::get('/daftarBuronA', [BuronAdminController::class, 'index']);
+Route::get('/Admin-detailburonan', function () { return view('Admin.MenuBuronan.DetailBuronan'); });
+Route::get('/admin-postingburonan', function() { return view('Admin.MenuBuronan.UploadBuronan'); });
+Route::get('/admin-editBuronan', function() { return view('Admin.MenuBuronan.EditBuronan'); });
 
-    // Admin - Menu Laporan
-    Route::get('/daftar-laporan', function() { return view('Admin.MenuLaporan.DaftarLaporan'); });
-    Route::get('/detail-laporan', function() { return view('Admin.MenuLaporan.DetailLaporan'); });
-    Route::get('/detail-orang-hilang', function() { return view('Admin.MenuLaporan.DetailLaporanOrhil'); });
+// --- Menu Laporan ---
+Route::get('/admin-daftarLaporan', function() { return view('Admin.MenuLaporan.DaftarLaporan'); });
+Route::get('/adm-detaillaporan', function() { return view('Admin.MenuLaporan.DetailLaporan'); });
+Route::get('/admin-orangHilang', function() { return view('Admin.MenuLaporan.DetailLaporanOrhil'); });
 
-    // Admin - Menu Artikel
-    Route::get('/daftar-artikel', function() { return view('Admin.MenuArtikel.DaftarArtikel'); });
-    Route::get('/post-artikel', function() { return view('Admin.MenuArtikel.PostingArtikelAdmin'); });
-});
+// --- Menu Artikel ---
+Route::get('/daftar-artikel', function() { return view('Admin.MenuArtikel.DaftarArtikel'); });
+Route::get('/admin-detailArtikel', function() { return view('Admin.MenuArtikel.DetailArtikelAdmin'); });
+Route::get('/admin-postArtikel', function() { return view('Admin.MenuArtikel.PostingArtikelAdmin'); });
+Route::get('/admin-editArtikel', function() { return view('Admin.MenuArtikel.EditArtikel'); });
 
 //                  TESTING                 //
 Route::get('/pakeman', function() { return view('User.HomePageWeb'); });
