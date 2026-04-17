@@ -6,6 +6,8 @@ use App\Http\Controllers\BuronListUserController;
 use App\Http\Controllers\BuronAdminController;
 use App\Http\Controllers\daftarArtikelUserController;
 use App\Http\Controllers\berandaUserController;
+use App\Http\Controllers\LaporanBiasa;
+use App\Http\Controllers\AuthController;
 
 
 Route::get('/', [berandaUserController::class, 'index']);//ini beranda
@@ -171,7 +173,22 @@ Route::get('/notifikasiadmin', function() {
 });
 
 
+        //  CONTROLLER          //
+Route::middleware(['auth'])->group(function () {
+    Route::get('/Buatlaporan', [LaporanBiasa::class, 'index']);
+    Route::post('/Buatlaporan', [LaporanBiasa::class, 'store']);
+});
 
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.index');
+    Route::post('/login', [AuthController::class, 'authenticate'])->name ('login.store');
+
+    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.index');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+});
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+Route::get('/login', [AuthController::class, 'index'])->name('login');
 
 
 

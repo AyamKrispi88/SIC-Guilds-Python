@@ -31,6 +31,8 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'tempat_tanggal_lahir' => $this->faker->date(),
             'password' => static::$password ??= Hash::make('password'),
+            'NIK' => $this->faker->unique()->numerify('################'),
+            'foto_profil' => $this->faker->optional()->imageUrl(200, 200, 'people'),
             'remember_token' => Str::random(10),
         ];
     }

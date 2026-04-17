@@ -32,6 +32,8 @@
         </div>
     </div>
 
+    <form action="{{ route('laporan.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
     <div class="flex flex-col md:flex-row justify-between items-start">
         <div class="grid grid-cols-1 gap-6 mb-8 w-full max-w-2xl">  
 
@@ -73,5 +75,7 @@
         Buat Laporan
     </x-button>
 </div>
+
+</form>
 
 @endsection

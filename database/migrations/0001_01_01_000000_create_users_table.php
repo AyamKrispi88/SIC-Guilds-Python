@@ -17,8 +17,10 @@ return new class extends Migration
             $table->boolean('role')->default(false);
             $table->string('nama_lengkap');
             $table->string('email')->unique();
-            $table->date('tempat_tanggal_lahir');
+            $table->string('tempat_tanggal_lahir');
+            $table->string('NIK')->unique();
             $table->string('password');
+            $table->string('foto_profil')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
