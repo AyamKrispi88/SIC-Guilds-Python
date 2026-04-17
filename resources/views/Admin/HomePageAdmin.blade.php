@@ -138,7 +138,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <x-daftar-artikel 
-                    image="{{ asset('assets/patungmacan.png') }}"
+                    img="{{ asset('assets/patungmacan.png') }}"
                     title="Berita Keamanan di Sekitar Patung Macan"
                     author="Admin Polisi"
                     content="Terjadi tindak kriminal di jalan patung macan yang melibatkan beberapa oknum..."
@@ -146,7 +146,7 @@
                 />
 
                 <x-daftar-artikel 
-                    image="{{ asset('assets/kejahatan.png') }}"
+                    img="{{ asset('assets/kejahatan.png') }}"
                     title="Daerah Rawan Kejahatan Berada di sekitar Denpasar!"
                     author="Admin Polisi"
                     content="Pihak kepolisian telah menandai suatu kawasan di sekitar denpasar menjadi kawasan rawan kejahatan..."
@@ -154,7 +154,7 @@
                 />
 
                 <x-daftar-artikel 
-                    image="{{ asset('assets/beladiri.png') }}"
+                    img="{{ asset('assets/beladiri.png') }}"
                     title="Peningkatan Patroli Malam di Area Publik"
                     author="Admin Polisi"
                     content="Guna menjaga kondusivitas, tim gabungan mulai rutin melakukan patroli di jam-jam rawan..."

@@ -62,7 +62,7 @@
             </x-button>
         </div>
     </form>
-        <p class=" text-blue-500 hover:underline"><a href="/">Sudah mempunyai akun? Login..</a></p>
+        <p class=" text-blue-500 hover:underline"><a href="/user-login">Sudah mempunyai akun? Login..</a></p>
     </section>
 </main>
 @endsection

@@ -23,9 +23,13 @@
 
 <div class="isikontenduanya flex flex-col gap-14 px-10 justify-center">
    <section class=" w-full h-auto flex flex-row justify-center gap-20">
-    <div class="">
+    <div  class=" flex flex-col gap-8 items-center">
         <img src="assets/fotoprofil.png"
              class="w-80 h-80 rounded-full object-cover">
+             <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <x-button variant="generalUse" onclick="this.closest('form').submit()">Logout</x-button>
+            </form>
     </div>
 
     <div class="bagiankanan w-[550px]">
@@ -77,9 +81,11 @@
                 kominfo123
             </div>
         </div>
-
+        <div class=" flex justify-between">
         <x-button class="trigger-edit" variant="generalUse">Edit Profil</x-button>
-    </div>
+         <x-button class=" bg-white border-primary px-3 py-2 md:px-4.5 md:py-3.5" href="/beranda">Kembali ke bernada</x-button>
+        </div>
+        </div>
 </section>
 
         <div class="edit-profil hidden flex flex-col md:flex-row items-center md:items-start gap-12 pt-10 border-t border-gray-50">

@@ -33,7 +33,7 @@ class AuthController extends Controller
     if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
 
-        return redirect()->intended('/beranda')->with('success', 'Berhasil login!');
+        return redirect('/beranda')->with('success', 'Berhasil login!');
     }
 
     return back()->withErrors([
@@ -85,6 +85,16 @@ class AuthController extends Controller
     public function index()
 {
     return view('User.login'); // Pastikan kamu punya file resources/views/login.blade.php
+}
+
+public function logout(Request $request)
+{
+    Auth::logout();
+    
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    
+    return redirect()->route('login')->with('success', 'Berhasil logout!');
 }
 
 }

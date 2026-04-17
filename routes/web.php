@@ -34,14 +34,14 @@ Route::middleware('auth')->group(function () {
     // Fitur User
     Route::get('/profile-user', function () { return view('User.profil'); });
     Route::get('/Buatlaporan', [LaporanBiasa::class, 'index']);
-    Route::post('/Buatlaporan', [LaporanBiasa::class, 'store'])->name('laporan.store');
+    Route::post('/Buatlaporan', [LaporanBiasa::class, 'store']);
     Route::get('/laporan', function () { return view('User.page_laporan'); });
     Route::get('/notifikasiU', function () { return view('User.Notifikasi'); });
     
     // Fitur Buronan & Artikel (User)
     Route::get('/list-buronan', [BuronListUserController::class, 'index']);
     Route::get('/detailBuronan', function () { return view('User.detailburonan'); });
-    Route::get('/detailLaporan/{id}', [App\Http\Controllers\LaporanBiasa::class, 'preview'])->name('laporan.preview');;
+    Route::get('/detailLaporan', function () { return view('User.detaillaporan'); });
     Route::get('/detailditemukan', function () { return view('User.detaillaporanditemukanburon'); });
     Route::get('/daftarArtikelU', [daftarArtikelUserController::class, 'index']);
     Route::get('/isiLaporanOrangHilangUser', function () { return view('User.page_isilaporanoranghilang'); });

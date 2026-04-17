@@ -59,4 +59,14 @@ class LaporanBiasa extends Controller
         // Tampilkan view preview dan kirimkan data laporannya
         return view('User.detaillaporan', compact('laporan'));
     }
+    public function edit($id)
+{
+    $laporan = ModelLaporan::findOrFail($id);
+
+    if ($laporan->user_id !== Auth::id()) {
+        abort(403, 'Anda tidak memiliki izin untuk melihat laporan ini.');
+    }
+
+    return view('User.editLapBias', compact('laporan'));
+}
 }

@@ -48,9 +48,12 @@
         </div>
 
         <div class="flex flex-col md:flex-row items-center md:items-start gap-12 pb-20">
-            <div class="w-full md:w-2/5 flex justify-center">
+            <div class="w-full md:w-2/5 flex flex-col gap-8 justify-center">
                 <img src="{{ asset('assets/profileadmin.png') }}" 
                      class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-8 border-white">
+                     <x-button href="/admin" variant="generalUse" class=" text-center">
+                    Logout
+                </x-button>
             </div>
 
             <div class="w-full md:w-3/5 space-y-6">
@@ -70,9 +73,14 @@
                     <label class="text-black text-lg font-normal">Password</label>
                     <input type="password" value="......" readonly class="w-full px-4 py-3 text-xl font-light text-gray-900 input-shadow-bottom bg-white">
                 </div>
-                <x-button variant="generalUse" trigger-edit class="trigger-edit w-full font-bold py-5 rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
+                <div class=" flex flex-row justify-between">
+                <x-button variant="generalUse" trigger-edit class="trigger-edit font-bold rounded-2xl shadow-lg mt-4 transition-transform active:scale-95">
                     Edit Profile
                 </x-button>
+                <x-button href="/admin" class="bg-white border-primary px-1.5 lg:px-3 py-1.5 lg:py-2">
+                    Kembali ke beranda
+                </x-button>
+                </div>
             </div>
         </div>
 
@@ -80,6 +88,7 @@
             <div class="w-full md:w-2/5 flex justify-center">
                 <img src="{{ asset('assets/profileadmin.png') }}" 
                      class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-8 border-white opacity-80">
+                
             </div>
 
             <div class="w-full md:w-3/5 space-y-6">
