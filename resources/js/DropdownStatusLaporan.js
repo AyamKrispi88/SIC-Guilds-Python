@@ -13,23 +13,34 @@ document.addEventListener('click', function (event) {
         menu.classList.toggle('hidden');
     }
 
-    if (item) {
-        // 1. Ambil teks untuk ditampilkan di layar (misal: "Laporan Kriminal")
+if (item) {
         const newStatus = item.innerText;
         const previewText = wrapper.querySelector('.selected-statuslaporan-text');
-        
-        // 2. Ambil nilai asli untuk database (misal: "Kasus Kriminal")
         const realValue = item.getAttribute('data-value');
         
-        // 3. Cari hidden input di dalam wrapper ini
+        // ==========================================
+        // LOGIKA REDIRECT 2 ARAH (PINTAR)
+        // ==========================================
+        // Cek apakah kita sedang berada di halaman form orang hilang
+        const isHalamanOrangHilang = window.location.pathname.includes('/isiLaporanOrangHilangUser');
+
+        if (realValue === 'Orang Hilang' && !isHalamanOrangHilang) {
+            // Jika pilih Orang Hilang, tapi posisinya BUKAN di halaman orang hilang -> Redirect ke Orang Hilang
+            window.location.href = '/isiLaporanOrangHilangUser'; 
+            return;
+        } else if (realValue !== 'Orang Hilang' && isHalamanOrangHilang) {
+            // Jika pilih laporan BUKAN Orang Hilang, tapi posisinya di halaman orang hilang -> Redirect balik ke form biasa
+            window.location.href = '/Buatlaporan';
+            return;
+        }
+        // ==========================================
+
         const hiddenInput = wrapper.querySelector('input[name="jenis_laporan"]');
         
-        // Ganti teks di layar
         if (previewText) {
             previewText.innerText = newStatus;
         }
 
-        // Isi nilai hidden input agar dikirim ke Laravel saat disubmit
         if (hiddenInput && realValue) {
             hiddenInput.value = realValue;
         }
