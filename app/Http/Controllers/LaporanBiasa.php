@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\LaporanBiasa as ModelLaporan;
 
 class LaporanBiasa extends Controller
 {
     // Menampilkan form
     public function create()
     {
-        return view('User.page_isilaporan'); // Sesuaikan dengan lokasi file blade kamu
+        return view('User.page_isilaporan');
+    }
+
+    public function index()
+    {
+        return view('User.page_isilaporan'); 
     }
 
     public function store(Request $request)
@@ -30,8 +36,27 @@ class LaporanBiasa extends Controller
 
         $validatedData['user_id'] = Auth::id();
 
-        LaporanBiasa::create($validatedData);
+        // 1. Simpan data yang baru dibuat ke dalam variabel $laporanBaru
+        $laporanBaru = ModelLaporan::create($validatedData);
 
-        return redirect()->back()->with('success', 'Laporan berhasil dikirim dan menunggu proses admin!');
+        // 2. Redirect halaman ke route 'laporan.preview' sambil membawa ID laporan tersebut
+        return redirect()->route('laporan.preview', ['id' => $laporanBaru->id])
+                         ->with('success', 'Laporan berhasil dikirim dan menunggu proses admin!');
+    }
+
+    // 3. Fungsi baru untuk menampilkan halaman preview
+    public function preview($id)
+    {
+        // Cari laporan di database berdasarkan ID yang dikirim dari URL
+        // findOrFail akan otomatis menampilkan error 404 jika ID tidak ditemukan
+        $laporan = ModelLaporan::findOrFail($id);
+
+        // Keamanan tambahan: Pastikan user hanya bisa melihat preview laporannya sendiri
+        if ($laporan->user_id !== Auth::id()) {
+            abort(403, 'Anda tidak memiliki izin untuk melihat laporan ini.');
+        }
+
+        // Tampilkan view preview dan kirimkan data laporannya
+        return view('User.detaillaporan', compact('laporan'));
     }
 }
