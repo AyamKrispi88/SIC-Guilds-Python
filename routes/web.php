@@ -9,193 +9,70 @@ use App\Http\Controllers\berandaUserController;
 use App\Http\Controllers\LaporanBiasa;
 use App\Http\Controllers\AuthController;
 
+//                      GUEST                   //
+Route::middleware('guest')->group(function () {
+    // Halaman utama login
+    Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+    // Proses login (POST) diarahkan ke '/' sesuai form action kamu
+    Route::post('/', [AuthController::class, 'authenticate'])->name('login.store');
 
-Route::get('/', [berandaUserController::class, 'index']);//ini beranda
+    // Registrasi
+    Route::get('/registrasi', [AuthController::class, 'showRegisterForm'])->name('register.index');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.store');
 
-
-
-//testing//
-
-Route::get('/tester', function () {
-    return view('User.HomePageUser');//ini salah
+    // Halaman pendukung lainnya (sebelum login)
+    Route::get('/confirm', function() { return view('User.inbox-send'); });
+    Route::get('/newPassword', function() { return view('User.Password-Baru'); });
 });
 
+//                      AFTERLOGIN              //
+Route::middleware('auth')->group(function () {
+    
+    // Beranda User (Halaman tujuan setelah login)
+    Route::get('/beranda', [berandaUserController::class, 'index'])->name('beranda');
 
-
-//                                   USER                                                    //
-
-//Pakem
-Route::get('/pakeman', function() {
-    return view('User.HomePageWeb');
-});
-
-Route::get('/pakemanA', function() {
-    return view('User.pakemAkun');
-});
-
-//Login, Regist, Ganti pw, dan sejenisnya
-
-Route::get('/user-login', function() {
-    return view('User.login');
-});
-
-Route::get('/confirm', function() {
-    return view('User.inbox-send');
-});
-
-Route::get('/password-changed', function() {
-    return view('User.change-password');
-});
-
-Route::get('/registrasi', function() {
-    return view('User.registrasi');
-});
-
-
-Route::get('/newPassword', function() {
-    return view('User.Password-Baru');
-});
-
-//profile 
-
-Route::get('/profile-user', function () {
-    return view('User.profil');
-});
-
-
-//page user
-
-Route::get('/Buatlaporan', function () {
-    return view('User.page_isilaporan');
-});
-
-Route::get('/list-buronan', [BuronListUserController::class, 'index']);
-
-Route::get('/daftarArtikelU', [daftarArtikelUserController::class, 'index']);
-
-//page lainnya
-
-Route::get('/detailBuronan', function () {
-    return view('User.detailburonan');
-});
-
-Route::get('/detailLaporan', function () {
-    return view('User.detaillaporan');
-});
-
-Route::get('/detailditemukan', function () {
-    return view('User.detaillaporanditemukanburon');
-});
-
-Route::get('/notifikasiU', function () {
-    return view('User.Notifikasi');
-});
-
-Route::get('/isiLaporanOrangHilangUser', function () {
-    return view('User.page_isilaporanoranghilang');
-});
-
-Route::get('/laporan', function () {
-    return view('User.page_laporan');
-});
-
-
-
-
-//                                                    Admin                                              //
-
-//Menu Buronan 
-Route::get('/Admin-detailburonan', function () {
-    return view('Admin.MenuBuronan.DetailBuronan');
-});
-
-Route::get('/admin-postingburonan', function() {
-    return view('Admin.MenuBuronan.UploadBuronan');
-});
-
-Route::get('/daftarBuronA', [BuronAdminController::class, 'index']);
-
-Route::get('/admin-editBuronan', function() {
-    return view('Admin.MenuBuronan.EditBuronan');
-});
-
-//Menu Laporan
-
-Route::get('/adm-detaillaporan', function() {
-    return view('Admin.MenuLaporan.DetailLaporan');
-});
-
-Route::get('/admin-daftarLaporan', function() {
-    return view('Admin.MenuLaporan.DaftarLaporan');
-});
-
-Route::get('/admin-orangHilang', function() {
-    return view('Admin.MenuLaporan.DetailLaporanOrhil');
-});
-
-//Menu Artikel
-
-Route::get('/daftar-artikel', function() {
-    return view('Admin.MenuArtikel.DaftarArtikel');
-});
-
-Route::get('/admin-detailArtikel', function() {
-    return view('Admin.MenuArtikel.DetailArtikelAdmin');
-});
-
-Route::get('/admin-editArtikel', function() {
-    return view('Admin.MenuArtikel.EditArtikel');
-});
-
-Route::get('/admin-postArtikel', function() {
-    return view('Admin.MenuArtikel.PostingArtikelAdmin');
-});
-
-//Akun stuff
-
-Route::get('/login-admin', function() {
-    return view('Admin.LoginAdmin');
-});
-
-//profile 
-
-Route::get('/profileadmin', function() {
-    return view('Admin.ProfileAdmin');
-});
-
-//Page biasa
-Route::get('/admin', function() {
-    return view('Admin.HomePageAdmin');
-});
-
-Route::get('/notifikasiadmin', function() {
-    return view('Admin.NotifikasiAdmin');
-});
-
-
-        //  CONTROLLER          //
-Route::middleware(['auth'])->group(function () {
+    // Fitur User
+    Route::get('/profile-user', function () { return view('User.profil'); });
     Route::get('/Buatlaporan', [LaporanBiasa::class, 'index']);
     Route::post('/Buatlaporan', [LaporanBiasa::class, 'store']);
+    Route::get('/laporan', function () { return view('User.page_laporan'); });
+    Route::get('/notifikasiU', function () { return view('User.Notifikasi'); });
+    
+    // Fitur Buronan & Artikel (User)
+    Route::get('/list-buronan', [BuronListUserController::class, 'index']);
+    Route::get('/detailBuronan', function () { return view('User.detailburonan'); });
+    Route::get('/detailLaporan', function () { return view('User.detaillaporan'); });
+    Route::get('/detailditemukan', function () { return view('User.detaillaporanditemukanburon'); });
+    Route::get('/daftarArtikelU', [daftarArtikelUserController::class, 'index']);
+    Route::get('/isiLaporanOrangHilangUser', function () { return view('User.page_isilaporanoranghilang'); });
+
+    // Logout
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::middleware('guest')->group(function () {
-    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.index');
-    Route::post('/login', [AuthController::class, 'authenticate'])->name ('login.store');
+//                      ADMIN                       //
+Route::prefix('admin-panel')->group(function () {
+    Route::get('/', function() { return view('Admin.HomePageAdmin'); });
+    Route::get('/profile', function() { return view('Admin.ProfileAdmin'); });
+    Route::get('/notifikasi', function() { return view('Admin.NotifikasiAdmin'); });
 
-    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.index');
-    Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+    // Admin - Menu Buronan
+    Route::get('/daftar-buron', [BuronAdminController::class, 'index']);
+    Route::get('/detail-buron', function () { return view('Admin.MenuBuronan.DetailBuronan'); });
+    Route::get('/upload-buron', function() { return view('Admin.MenuBuronan.UploadBuronan'); });
+    Route::get('/edit-buron', function() { return view('Admin.MenuBuronan.EditBuronan'); });
+
+    // Admin - Menu Laporan
+    Route::get('/daftar-laporan', function() { return view('Admin.MenuLaporan.DaftarLaporan'); });
+    Route::get('/detail-laporan', function() { return view('Admin.MenuLaporan.DetailLaporan'); });
+    Route::get('/detail-orang-hilang', function() { return view('Admin.MenuLaporan.DetailLaporanOrhil'); });
+
+    // Admin - Menu Artikel
+    Route::get('/daftar-artikel', function() { return view('Admin.MenuArtikel.DaftarArtikel'); });
+    Route::get('/post-artikel', function() { return view('Admin.MenuArtikel.PostingArtikelAdmin'); });
 });
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
-Route::get('/login', [AuthController::class, 'index'])->name('login');
-
-
-
-
-
-
-
-
-
-
+//                  TESTING                 //
+Route::get('/pakeman', function() { return view('User.HomePageWeb'); });
+Route::get('/pakemanA', function() { return view('User.pakemAkun'); });
+Route::get('/tester', function () { return view('User.HomePageUser'); });

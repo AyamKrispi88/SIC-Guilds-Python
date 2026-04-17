@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
-        return view('User.login'); // Pastikan nanti buat file login.blade.php
+        return view('User.login');
     }
 
     public function authenticate(Request $request)
@@ -33,7 +33,7 @@ class AuthController extends Controller
     if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
 
-        return redirect()->intended('/dashboard')->with('success', 'Berhasil login!');
+        return redirect()->intended('/beranda')->with('success', 'Berhasil login!');
     }
 
     return back()->withErrors([
