@@ -37,6 +37,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/Buatlaporan', [LaporanBiasa::class, 'store'])->name('laporan.store');
     Route::get('/laporan', function () { return view('User.page_laporan'); });
     Route::get('/notifikasiU', function () { return view('User.Notifikasi'); });
+    // Route untuk menampilkan halaman form edit
+    Route::get('/laporan/edit/{id}', [App\Http\Controllers\LaporanBiasa::class, 'edit'])->name('laporan.edit');
+
+    // Route untuk memproses penyimpanan data yang diedit (menggunakan PUT/POST)
+    Route::put('/laporan/update/{id}', [App\Http\Controllers\LaporanBiasa::class, 'update'])->name('laporan.update');
     
     // Fitur Buronan & Artikel (User)
     Route::get('/list-buronan', [BuronListUserController::class, 'index']);

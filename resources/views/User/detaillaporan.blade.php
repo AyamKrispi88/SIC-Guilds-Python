@@ -91,10 +91,11 @@
         </div>
 
     <div class="md:hidden justify-center flex flex-row w-full gap-3 items-center px-5 mb-5">
-
+        <a href="{{ route('laporan.edit', $laporan->id) }}" class="w-full max-w-[250px]">
             <x-button variant="generalUse" class="w-full max-w-[250px] hover:bg-blue-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg text-center">
             Edit Laporan
             </x-button>
+        </a>
 
             <x-button variant="transpar" class="hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 border border-gray-400 rounded-lg">
                 Hapus Laporan
